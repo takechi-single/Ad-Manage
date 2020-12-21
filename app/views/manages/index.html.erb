@@ -1,4 +1,23 @@
-<div class="wrapper">
-  <%= render "side_tools"%>
-  <%= render "main_manage"%>
-</div>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Ad-Manage</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <%= render "header_top"%>
+      </div>  
+    </header>  
+    <div class="main-wrapper">  
+      <div class="side-tools">
+        <%= render "side_tools"%>
+      </div>
+      <div class="main-manage">  
+        <%= render "main_manage"%>
+      </div>
+    </div>
+  </body>  
+</html>
+
