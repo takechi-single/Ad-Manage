@@ -4,17 +4,14 @@
 <div class="navbar">
 
   <ul class="nav-lists">
+    
     <li>
-      <a class="new_register_link" href="#">Ad-Manageについて</a>
+      <%= "ようこそ！"%>
+      <%= link_to current_user.name, edit_user_path(current_user) %>
+      <%= "様"%>
     </li>
     <li>
-      <a href="#">Ad-Manage規定</a>
-    </li>
-    <li>
-      <a class="new_register_link" href="#">ユーザー名</a>
-    </li>
-    <li>
-      <a href="#">ログアウト</a>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
     </li>
   </ul>
 </div>
