@@ -1,8 +1,8 @@
 .account-page .account-page__inner {
-  width: 980px;
+  width: 700px;
   margin: 60px auto;
   padding: 60px;
-  background-color: #fff;
+  background-color: black;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -26,7 +26,6 @@
   display: block;
   width: 60px;
   margin-top: 5px;
-  border-bottom: 1px solid #38aef0;
 }
 .account-page .account-page__header h5 {
   margin-bottom: 20px;
@@ -35,8 +34,8 @@
 }
 .account-page .account-page__header .btn {
   margin-top: 20px;
-  color: #fff;
-  background-color: #ccc;
+  color: white;
+  background-color:black;
   font-size: 14px;
 }
 .account-page .field {
@@ -47,9 +46,11 @@
   letter-spacing: 1px;
   font-size: 14px;
   font-weight: 200;
+  color: #ddd;
 }
-.account-page .field .field-label i {
+.account-page .field .field- i {
   font-size: 11px;
+  color: #ddd;
 }
 .account-page .field .field-input input {
   width: 100%;
@@ -69,10 +70,10 @@
 .account-page input[type=submit] {
   float: left;
   margin-top: 20px;
-  color: #fff;
-  background-color: #38aef0;
+  color: white;
+  background-color: grey;
 }
-.account-page .field-label .field_with_errors {
+.account-page .field- .field_with_errors {
   display: inline-block;
   color: #d65f4c;
   font-weight: 400;
