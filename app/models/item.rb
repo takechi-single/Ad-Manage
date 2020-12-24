@@ -2,7 +2,7 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'is invalid. Input full-width characters.' }
     validates :text, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'is invalid. Input full-width characters.' }
-    validates :price
+    validates :price, numericality: { only_integer: true, message: "is invalid. Input half-width characters." }
     validates :relese_date
   end
 
