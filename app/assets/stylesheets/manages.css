@@ -67,10 +67,18 @@ li {
   height: calc(100vh - 50px);
   padding: 0 20px;
   border: white solid 3px;
+  display: flex;
+  
+}
+
+.tools {
+  display: flex;
+  flex-flow: column;
+  justify-content:space-around;
 }
 
 .tool {
-  padding: 60px 50px;
+  padding: 20px 30px;
 }
 
 .tool-name a {
@@ -78,7 +86,16 @@ li {
   color: white;
 }
 
+.create-item a {
+  font-size: 24px;
+  border: 1px solid lightgray;
+  padding: 14px;
+  color:white;
+  text-decoration: none;
   
+}
+ 
+
 .main-manage {
   background-color: floralwhite;
   width: calc(100vw - 250px);

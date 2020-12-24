@@ -1,0 +1,42 @@
+<div class='account-page' id='account-page'>
+  <div class='account-page__inner clearfix'>
+    <div class='account-page__inner--left account-page__header'>
+      <h2>商材登録</h2>
+    </div>
+    <div class='account-page__inner--right user-form'>
+      <%= form_with(model: @item, url: items_path, local: true) do |f|%>
+        <%#= devise_error_messages!%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :商材名%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :name, autofocus: true%>
+          </div>
+          <div class='field-label'>
+            <%= f.label :商材詳細%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :text, autofocus: true%>
+          </div>
+          <div class='field-label'>
+            <%= f.label :希望小売価格%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :price, autofocus: true%>
+          </div>
+          <div class='field-label'>
+            <%= f.label :発売日%>
+          </div>
+          <div class='field-input'>
+            <%= f.date_field :relese_date, autofocus: true%>
+          </div>
+        </div>
+       
+        <div class='actions'>
+          <%= f.submit "商材登録完了", class: 'btn'%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
