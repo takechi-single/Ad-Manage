@@ -65,20 +65,35 @@ li {
   background-color: black;
   width: 250px;
   height: calc(100vh - 50px);
-  padding: 0 20px;
+  padding: 0 10px;
   border: white solid 3px;
   display: flex;
-  
+
 }
 
-.tools {
+
+
+.tool1 {
   display: flex;
+  height: 80%;
   flex-flow: column;
-  justify-content:space-around;
+  justify-content:space-evenly;
+  padding: 20px 30px;
+}
+.tool2 {
+  height: 20%;
+  flex-flow: column;
+  justify-content:space-evenly;
+  padding: 20px 30px;
 }
 
-.tool {
-  padding: 20px 30px;
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
 }
 
 .tool-name a {
@@ -87,8 +102,8 @@ li {
 }
 
 .create-item a {
-  font-size: 24px;
-  border: 1px solid lightgray;
+  font-size: 20px;
+  border-bottom: 1px solid lightgray;
   padding: 14px;
   color:white;
   text-decoration: none;

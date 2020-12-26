@@ -1,25 +1,22 @@
-<div class="tools">
-<div class="tool">
-    <div class="tool-name">
-      <a href="#">商品画像</a>
-    </div>
+
+
+   <div class="tool1">     
+      <div class="create-item">
+        <%= link_to "進行一覧表", new_item_path(@user), method: :get %>
+      </div>
+      <div class="create-item">
+        <%= link_to "商材登録", new_item_path(@user), method: :get %>
+      </div>
+      <div class="create-item">
+        <%= link_to "広告媒体登録", new_item_path(@user), method: :get %>
+      </div>
+      <div class="create-item">
+        <%= link_to "広告出稿状況", new_item_path(@user), method: :get %>
+      </div>
+      <div class="create-item">
+        <%= link_to "ユーザー情報", new_item_path(@user), method: :get %>
+      </div>
   </div>
-  <div class="tool">
-    <div class="tool-name">
-      <a href="#">商品名</a>
-    </div>
-</div>
-<div class="tool">
-    <div class="tool-name">
-      <a href="#">商品内容</a>
-    </div>
-</div>
-<div class="tool">
-    <div class="tool-name">
-      <a href="#">商品価格</a>
-    </div>   
-</div>
-<div class="create-item">
-    <%= link_to "商材を登録する", new_item_path(@user), method: :get %>
+  
+  <div class="tools2">
   </div>
-</div>  

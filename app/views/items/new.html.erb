@@ -6,7 +6,17 @@
     <div class='account-page__inner--right user-form'>
       <%= form_with(model: @item, url: items_path, local: true) do |f|%>
         <%= render 'error_messages', model: @item %>
+        
         <div class='field'>
+
+        <div class="img-upload">
+        <div class="click-upload">
+          <div class='field-label'>
+                <%= f.label :商材画像%>
+          </div>
+            <%= f.file_field :image, id:"item-image" %>
+          </div>
+        </div>
           <div class='field-label'>
             <%= f.label :商材名%>
           </div>
