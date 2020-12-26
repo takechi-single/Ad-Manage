@@ -11,12 +11,17 @@ a {
   color:white;
   margin: 0 auto;
   text-align: center;
+  
+}
+
+a:hover {
+	background-color:grey; 
 }
 
 h1,h2{
   font-size: 24px;
   color:white;
-  margin: 0 auto;
+  
 }
 
 h3,h4,h5,h6,p {
@@ -41,6 +46,7 @@ ul,li {
 .heading {
   width: 70%;
   margin-left: 30px;
+  
 }
 
 .navbar {
