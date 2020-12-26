@@ -3,6 +3,7 @@ body {
   font-size: 14px;
   color: #333;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 a {
@@ -10,12 +11,17 @@ a {
   color:white;
   margin: 0 auto;
   text-align: center;
+  
+}
+
+a:hover {
+	background-color:grey; 
 }
 
 h1,h2{
   font-size: 24px;
   color:white;
-  margin: 0 auto;
+  
 }
 
 h3,h4,h5,h6,p {
@@ -40,6 +46,7 @@ ul,li {
 .heading {
   width: 70%;
   margin-left: 30px;
+  
 }
 
 .navbar {
@@ -58,19 +65,42 @@ li {
 
 .main-wrapper {
   display: flex;
-  overflow: scroll;
+  
 }
 
 .side-tools {
   background-color: black;
   width: 250px;
   height: calc(100vh - 50px);
-  padding: 0 20px;
+  padding: 0 10px;
   border: white solid 3px;
+  display: flex;
+
 }
 
-.tool {
-  padding: 60px 50px;
+
+
+.tool1 {
+  display: flex;
+  height: 80%;
+  flex-flow: column;
+  justify-content:space-evenly;
+  padding: 20px 30px;
+}
+.tool2 {
+  height: 20%;
+  flex-flow: column;
+  justify-content:space-evenly;
+  padding: 20px 30px;
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
 }
 
 .tool-name a {
@@ -78,10 +108,21 @@ li {
   color: white;
 }
 
+.create-item a {
+  font-size: 20px;
+  border-bottom: 1px solid lightgray;
+  padding: 14px;
+  color:white;
+  text-decoration: none;
   
+}
+ 
+
 .main-manage {
   background-color: floralwhite;
   width: calc(100vw - 250px);
-  overflow: scroll;
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

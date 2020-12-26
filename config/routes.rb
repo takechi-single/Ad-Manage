@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'manages/index'
   root to: 'manages#index'
-  resources :users, only: %i[edit update]
+  resources :users, only: %i[edit update show]
+  resources :items, only: %i[index new create show] 
+  resources :manages, only: %i[index  show] 
 end
