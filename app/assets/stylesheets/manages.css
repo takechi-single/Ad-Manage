@@ -3,6 +3,7 @@ body {
   font-size: 14px;
   color: #333;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 a {
@@ -58,7 +59,7 @@ li {
 
 .main-wrapper {
   display: flex;
-  overflow: scroll;
+  
 }
 
 .side-tools {
@@ -114,6 +115,8 @@ li {
 .main-manage {
   background-color: floralwhite;
   width: calc(100vw - 250px);
-  overflow: scroll;
   
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
