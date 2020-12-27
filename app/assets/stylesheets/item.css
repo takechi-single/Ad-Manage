@@ -147,3 +147,17 @@
   margin-top: 2vh;
 }
 
+h3 {
+ font-size: 24px;
+ font-weight: bold;
+}
+table th {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+table td {
+  padding: 5px 10px;
+}

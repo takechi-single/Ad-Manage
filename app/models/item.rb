@@ -7,7 +7,7 @@ class Item < ApplicationRecord
     validates :image
   end
 
-  belongs_to :user
+  belongs_to :user, optional: true
   has_one_attached :image
   has_many :manages
 end
