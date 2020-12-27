@@ -1,11 +1,12 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  before_action :set_item, only: [:index, :show, :edit, :update, :destroy]
+  before_action :set_item, only: [:index, :show, :edit, :update, :destroy, :new]
   def index
   end
 
   def new
     @item = Item.new
+    
   end
 
   def create
@@ -39,5 +40,6 @@ class ItemsController < ApplicationController
 
   def set_item
     @items = Item.all
+    
   end
 end
