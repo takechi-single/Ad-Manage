@@ -151,12 +151,26 @@ h3 {
  font-size: 24px;
  font-weight: bold;
 }
+
+th, td {
+  width: 120px;
+}
+
+thead, tbody {
+  display: block;
+}
+tbody {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 665px;
+}
 table th {
   padding: 10px;
   background-color: black;
   color: white;
   font-weight: bold;
 }
+
 
 table td {
   padding: 5px 10px;
