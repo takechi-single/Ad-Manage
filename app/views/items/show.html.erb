@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Ad-Manage</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <%= render "shared/header_top" %>
+      </div>  
+    </div>  
+    <div class="main-wrapper">  
+      <div class="side-tools">
+        <%= render "shared/side_tools"%>
+      </div>
+      <% @items.each do |item| %>
+        <p><%= item.name %></p>
+        <p><%= item.text %></p>
+        <p><%= item.price %></p>
+      <% end %>
+    </div>
+  </body>  
+</html>

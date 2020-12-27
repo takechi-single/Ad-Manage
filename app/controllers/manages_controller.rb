@@ -1,9 +1,7 @@
 class ManagesController < ApplicationController
   def index
-    @item = Item.all
+    @items = Item.all
   end
 
-  def show
-    
-  end
+  
 end
