@@ -18,7 +18,7 @@ a:hover {
 	background-color:grey; 
 }
 
-h1,h2{
+h1, h2{
   font-size: 24px;
   color:white;
   
@@ -119,10 +119,12 @@ li {
  
 
 .main-manage {
-  background-color: floralwhite;
+  background-color: white;
   width: calc(100vw - 250px);
-  
+  overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  
 }

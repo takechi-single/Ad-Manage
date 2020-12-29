@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  before_action :set_item, only: [:index, :show, :edit, :update, :destroy, :new]
+  before_action :set_item, only: [:index, :show, :edit, :new, :create]
   def index
   end
 
@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # binding.pry
+    #binding.pry
     @item = Item.new(item_params)
     if @item.valid?
       @item.save
