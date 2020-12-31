@@ -117,7 +117,7 @@ li {
  
 
 .main-manage {
-  background-color: white;
+  background: linear-gradient( 45deg, #7bc6e2, #c4d4ff);
   width: 1150px;
   overflow: scroll;
   display: flex;
@@ -140,20 +140,44 @@ li {
 .media1 {
   height: 385px;
   width: 575px;
-  background-color: aquamarine;
+  background: linear-gradient( 135deg, red, #c4fff7);
+  
 }
 .media2 {
   height: 385px;
   width: 575px;
-  background-color: lightseagreen;
+  background: linear-gradient( 225deg, green, #c4fff7);
+  
+
 }
 .media3 {
   height: 395px;
   width: 575px;
-  background-color: lightyellow;
+  background: linear-gradient( 45deg, yellow, #c4fff7);
+
 }
 .media4 {
   height: 395px;
   width: 575px;
-  background-color: lightpink;
+  background: linear-gradient( 315deg, blue,#c4fff7);
+
 }
+
+h11{
+  font-size: 30px;
+  font-weight: bold;
+
+}
+h12{
+  font-size: 30px;
+  font-weight: bold;
+}
+h13{
+  font-size: 30px;
+  font-weight: bold;
+}
+h14{
+  font-size: 30px;
+  font-weight: bold;
+}
+
