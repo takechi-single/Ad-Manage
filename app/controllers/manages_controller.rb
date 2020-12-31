@@ -1,9 +1,18 @@
 class ManagesController < ApplicationController
+  before_action :set_item, only: [:show]
+
   def index
-    @item = Item.all
+    @items = Item.all.includes(:user)
   end
 
   def show
-    
+    @items = Item.all.includes(:user)
   end
+  
+  private
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
 end

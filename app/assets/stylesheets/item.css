@@ -1,66 +1,73 @@
-.account-page .account-page__inner {
+.register-page .register-page__inner {
   width: 700px;
   margin: 60px auto;
-  padding: 60px;
+  padding: 30px;
   background-color: black;
   border: 3px solid #ddd;
   border-radius: 5px;
-}
-.account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
-  float: left;
-  width: 50%;
   
 }
-.account-page .account-page__inner:after {
+.register-page .register-page__inner .register-page__inner--left, .register-page .register-page__inner .register-page__inner--right {
+  float: left;
+  width: 40%;
+  
+}
+.register-page .register-page__inner:after {
   clear: both;
   content: "";
   display: block;
+  overflow: scroll;
 }
-.account-page .account-page__header h2 {
-  margin-bottom: 10px;
+.register-page .register-page__header h2 {
+  margin-bottom: 5px;
   letter-spacing: 3px;
-  font-size: 40px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 100;
+  color:white;
 }
-.account-page .account-page__header h2:after {
+.register-page .register-page__header h2:after {
   content: "";
   display: block;
-  width: 60px;
+  width: 30px;
   margin-top: 5px;
+  
 }
-.account-page .account-page__header h5 {
+.register-page .register-page__header h5 {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 200;
+  
 }
-.account-page .account-page__header .btn {
+.register-page .register-page__header .btn {
   margin-top: 20px;
   color: white;
   background-color:black;
   font-size: 14px;
 }
-.account-page .field {
-  margin-bottom: 10px;
+.register-page .field {
+  margin-bottom: 8px;
+  
 }
-.account-page .field .field-label {
+.register-page .field .field-label {
   padding: 10px 0;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 200;
   color: #ddd;
 }
-.account-page .field .field- i {
+.register-page .field .field- i {
   font-size: 11px;
   color: #ddd;
 }
-.account-page .field .field-input input {
+.register-page .field .field-input input {
   width: 100%;
-  padding: 10px;
+  padding: 7px;
   letter-spacing: 1px;
+  
 }
-.account-page .btn {
+.register-page .btn {
   display: inline-block;
-  height: 50px;
+  height: 45px;
   padding: 0 30px;
   line-height: 50px;
   letter-spacing: 1px;
@@ -68,21 +75,21 @@
   border: none;
   border-radius: 2px;
 }
-.account-page input[type=submit] {
+.register-page input[type=submit] {
   float: left;
   margin-top: 20px;
   color: white;
   background-color: grey;
 }
-.account-page .field- .field_with_errors {
+.register-page .field- .field_with_errors {
   display: inline-block;
   color: #d65f4c;
   font-weight: 400;
 }
-.account-page .field-input .field_with_errors {
+.register-page .field-input .field_with_errors {
   position: relative;
 }
-.account-page .field-input .field_with_errors:after {
+.register-page .field-input .field_with_errors:after {
   content: "";
   display: block;
   position: absolute;
@@ -119,7 +126,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 2vh 0;
+  padding: 1vh 0;
 }
 
 .click-upload {
@@ -147,3 +154,41 @@
   margin-top: 2vh;
 }
 
+.main-item-index {
+  height: 780px;
+  width: 1150px;
+  table-layout: auto;
+}
+
+h3 {
+ font-size: 24px;
+ font-weight: bold;
+}
+
+
+th, td {
+ 
+}
+
+thead, tbody {
+  display: block;
+  
+}
+tbody {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
+  height: 680px;
+}
+table th {
+  padding: 2px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  
+}
+
+
+table td {
+  padding: 5px 10px;
+}
