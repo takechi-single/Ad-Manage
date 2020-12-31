@@ -28,7 +28,10 @@
 - has_many :item_users
 - has_many :users, through: item_users
 - has_many :advertising
+<<<<<<< Updated upstream
 - has_many :customer
+=======
+>>>>>>> Stashed changes
 
 ## item_users テーブル
 
@@ -53,6 +56,7 @@
 ### Association
 
 - belongs_to :item
+<<<<<<< Updated upstream
 - belongs_to :user
 
 ## customers テーブル
@@ -67,3 +71,6 @@
 
 - belongs_to :item
 - belongs_to :advertising
+=======
+- belongs_to :user
+>>>>>>> Stashed changes
