@@ -155,7 +155,8 @@
 }
 
 .main-item-index {
-  width: 90%;
+  height: 780px;
+  width: 1150px;
   table-layout: auto;
 }
 
