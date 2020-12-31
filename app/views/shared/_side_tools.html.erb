@@ -2,7 +2,7 @@
 
    <div class="tool1">     
       <div class="create-item">
-        <%= link_to "商品一覧表", item_path(@items) %>
+        <%= link_to "商品一覧表", item_path(@items.ids), method: :get %>
       </div>
       <div class="create-item">
         <%= link_to "商材登録", new_item_path(@user), method: :get %>

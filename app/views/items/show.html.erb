@@ -24,7 +24,7 @@
             <thead>
               <tr>
                 <th width="5%">No</th>
-                <th width="15.3%">商材画像</th>
+                <th width="15.4%">商材画像</th>
                 <th width="15%">商材名称</th>
                 <th width="33%">商材詳細</th>
                 <th width="10%">希望小売価格</th>
@@ -43,7 +43,7 @@
                     <td width="10%"><%= item.price %></td>
                     <td width="10%"><%= item.relese_date %></td>
                     <td width="10%"><%= item.user.name %></td>
-                    <td width="15%"><%= link_to("詳細", "/items/#{item.id}") %></td>
+                    <td width="15%"><%= link_to '詳細', manage_path(item.id), method: :get %></td>
                   </tr>  
               <% end %>
             </table>  

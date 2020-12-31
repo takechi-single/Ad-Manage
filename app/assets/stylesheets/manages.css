@@ -38,7 +38,7 @@ ul,li {
 
 .header {
   background-color: black;
-  height: 50px;
+  height: calc(100vh - 770px);
   padding: 10px 0;
   display: flex;
 }
@@ -70,15 +70,13 @@ li {
 
 .side-tools {
   background-color: black;
-  width: 250px;
-  height: calc(100vh - 50px);
+  width: calc(100vw - 1150px);
+  height: 770px;
   padding: 0 10px;
   border: white solid 3px;
   display: flex;
 
 }
-
-
 
 .tool1 {
   display: flex;
@@ -120,11 +118,42 @@ li {
 
 .main-manage {
   background-color: white;
-  width: calc(100vw - 250px);
+  width: 1150px;
   overflow: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  
+.manage-wrapper{
+  display: flex;
+  flex-wrap: wrap
+}
+
+.all-media{
+  height: 780px;
+  width: 1150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.media1 {
+  height: 385px;
+  width: 575px;
+  background-color: aquamarine;
+}
+.media2 {
+  height: 385px;
+  width: 575px;
+  background-color: lightseagreen;
+}
+.media3 {
+  height: 395px;
+  width: 575px;
+  background-color: lightyellow;
+}
+.media4 {
+  height: 395px;
+  width: 575px;
+  background-color: lightpink;
 }
