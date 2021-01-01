@@ -68,7 +68,7 @@ li {
   
 }
 
-.side-tools {
+.side-tools, .introduction {
   background-color: black;
   width: calc(100vw - 1150px);
   height: 770px;
