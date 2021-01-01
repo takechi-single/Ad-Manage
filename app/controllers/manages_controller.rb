@@ -1,5 +1,5 @@
 class ManagesController < ApplicationController
-  before_action :set_item, only: [:show]
+  
 
   def index
     @items = Item.all.includes(:user)
