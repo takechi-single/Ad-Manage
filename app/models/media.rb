@@ -16,4 +16,8 @@ class Media < ActiveHash::Base
     { id: 14, name: '交通広告' },
     { id: 15, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :plan
+
   end
