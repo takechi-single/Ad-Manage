@@ -1,3 +1,4 @@
+/* リセットCSS */
 .register-page .register-page__inner {
   width: 700px;
   margin: 60px auto;
@@ -158,6 +159,7 @@
   height: 780px;
   width: 1150px;
   table-layout: auto;
+  background: linear-gradient( 225deg, green, #c4fff7);
 }
 
 h3 {

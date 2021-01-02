@@ -46,8 +46,8 @@ ul,li {
 .header {
   background-color: black;
   height: calc(100vh - 770px);
-  padding: 10px 0;
   display: flex;
+  
 }
 
 .heading {
@@ -58,7 +58,8 @@ ul,li {
 
 .navbar {
   width: 30%;
-  padding: 20px;
+  padding-top: 20px;
+  
 }
 
 .nav-lists {
@@ -138,7 +139,7 @@ li {
 }
 
 .all-media{
-  height: 780px;
+  height: 7７0px;
   width: 1150px;
   display: flex;
   flex-wrap: wrap;
@@ -158,13 +159,13 @@ li {
 
 }
 .media3 {
-  height: 395px;
+  height: 385px;
   width: 575px;
   background: linear-gradient( 45deg, yellow, #c4fff7);
 
 }
 .media4 {
-  height: 395px;
+  height: 385px;
   width: 575px;
   background: linear-gradient( 315deg, blue,#c4fff7);
 
