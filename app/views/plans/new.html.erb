@@ -11,6 +11,33 @@
       
       <div class="main-item-index">
       
+      <div class="plan-new">
+        <h1>広告プランを作成する</h1><p>下記フォームに必要事項を入力してください　※空欄可</p>
+        <%= form_with model: @plan, url:item_plans_path, local: true do |f| %>
+        <div class="plan-box">
+        <a>いつ広告を出稿するか</a>
+        <%= f.date_field :when, class:"title", placeholder:"テキスト" %>
+        <a>広告出稿期間</a>
+        <%= f.date_field :when_by, class:"title", placeholder:"テキスト" %>
+        <a>広告担当者</a>
+        <%= f.text_field :who, class:"title", placeholder:"例）山田太郎" %>
+        <a>広告担当者（サブ）</a>
+        <%= f.text_field :where, class:"title", placeholder:"例）東京都中野区" %>
+        <a>ターゲット層</a>
+        <%= f.collection_select(:target_id, Target.all, :id, :name, {}, {class:"target-select"}) %>
+        <a>広告媒体</a>
+        <%= f.collection_select(:media_id, Media.all, :id, :name, {}, {class:"media-select"}) %>
+        <a>広告出稿の理由</a>
+        <%= f.text_field :why, class:"title", placeholder:"例）店内リニューアル後の集客告知の為" %>
+        <a>広告出稿量(概算)</a>
+        <%= f.text_field :how_many, class:"title", placeholder:"例）広告発注量" %>
+        <a>広告費用(概算)</a>
+        <%= f.text_field :how_much, class:"title", placeholder:"例）広告発注料金" %>
+        <%= f.submit "投稿する" ,class:"btn" %>
+        </div>
+        <% end %>
+
+      </div>
 
 
       </div>

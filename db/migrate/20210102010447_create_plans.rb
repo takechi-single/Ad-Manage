@@ -6,7 +6,7 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.string :where
       t.string :who
       t.string :with_whom
-      t.string :whom
+      t.integer :target_id
       t.integer :media_id
       t.string :why
       t.string :how_many

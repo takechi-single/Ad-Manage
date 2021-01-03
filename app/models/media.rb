@@ -1,6 +1,6 @@
 class Media < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '---' },
     { id: 2, name: 'インターネット' },
     { id: 3, name: '地上波テレビ' },
     { id: 4, name: '衛生メデイア関連' },

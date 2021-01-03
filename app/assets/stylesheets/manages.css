@@ -8,7 +8,7 @@ body {
 
 a {
   font-size: 14px;
-  color:white;
+  color:black;
   margin: 0 auto;
   text-align: center;
   
@@ -19,6 +19,7 @@ p{
   color:white;
   margin: 0 auto;
   text-align: center;
+  padding: 10px 0;
 }
 
 a:hover {
@@ -31,9 +32,10 @@ h1, h2{
   
 }
 
-h3,h4,h5,h6,p {
+h3,h4,h5,h6, {
   padding: 10px 0;
   margin: 0;
+  
 }
 
 ul,li {

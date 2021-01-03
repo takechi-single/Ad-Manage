@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_01_02_010447) do
     t.string "where"
     t.string "who"
     t.string "with_whom"
-    t.string "whom"
+    t.integer "target_id"
     t.integer "media_id"
     t.string "why"
     t.string "how_many"
