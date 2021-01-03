@@ -2,10 +2,18 @@
 
    <div class="tool1">     
       <div class="create-item">
+        <% if user_signed_in? %>
         <%= link_to "商品一覧表", item_path(@items.ids) %>
+        <% else %>
+        <%= link_to "新規登録", new_user_registration_path, method: :get %>
+        <% end %>
       </div>
       <div class="create-item">
+        <% if user_signed_in? %>
         <%= link_to "商材登録", new_item_path(@user) %>
+         <% else %>
+        <%= link_to "ログイン", new_user_session_path, method: :get %>
+        <% end %>
       </div>
       <div class="create-item">
         <%= link_to "広告媒体登録", "/", method: :get %>

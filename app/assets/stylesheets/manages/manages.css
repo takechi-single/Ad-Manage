@@ -8,10 +8,18 @@ body {
 
 a {
   font-size: 14px;
-  color:white;
+  color: white;
   margin: 0 auto;
   text-align: center;
   
+}
+
+p{
+  font-size: 14px;
+  color:white;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0;
 }
 
 a:hover {
@@ -24,9 +32,10 @@ h1, h2{
   
 }
 
-h3,h4,h5,h6,p {
+h3,h4,h5,h6, {
   padding: 10px 0;
   margin: 0;
+  
 }
 
 ul,li {
@@ -39,8 +48,8 @@ ul,li {
 .header {
   background-color: black;
   height: calc(100vh - 770px);
-  padding: 10px 0;
   display: flex;
+  
 }
 
 .heading {
@@ -51,7 +60,8 @@ ul,li {
 
 .navbar {
   width: 30%;
-  padding: 20px;
+  padding-top: 20px;
+  
 }
 
 .nav-lists {
@@ -68,14 +78,14 @@ li {
   
 }
 
-.side-tools, .introduction {
+.side-tools {
   background-color: black;
   width: calc(100vw - 1150px);
   height: 770px;
   padding: 0 10px;
   border: white solid 3px;
   display: flex;
-
+  text-align: center;
 }
 
 .tool1 {
@@ -131,7 +141,7 @@ li {
 }
 
 .all-media{
-  height: 780px;
+  height: 7７0px;
   width: 1150px;
   display: flex;
   flex-wrap: wrap;
@@ -151,13 +161,13 @@ li {
 
 }
 .media3 {
-  height: 395px;
+  height: 385px;
   width: 575px;
   background: linear-gradient( 45deg, yellow, #c4fff7);
 
 }
 .media4 {
-  height: 395px;
+  height: 385px;
   width: 575px;
   background: linear-gradient( 315deg, blue,#c4fff7);
 

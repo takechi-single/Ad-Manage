@@ -1,10 +1,4 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Ad-Manage</title>
-  </head>
-  <body>
+
     <header>
       <div class="header">
         <%= render "shared/header_top" %>
@@ -36,7 +30,7 @@
             <tbody>
               <% @items.each.with_index(1) do |item, i| %>
                  <tr>   
-                    <td width="5%"><%= item.id %></td>
+                    <td width="5%"><%= link_to item.id, new_item_plan_path(item.id) %></td>
                     <td width="15%"><%= image_tag item.image.variant(resize:'100x100') if item.image.attached? %></td>
                     <td width="15%"><%= item.name %></td>
                     <td width="33%"><%= item.text %></td>
@@ -52,5 +46,3 @@
       </div>
 
     </div>
-  </body>  
-</html>

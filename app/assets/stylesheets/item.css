@@ -1,3 +1,4 @@
+/* リセットCSS */
 .register-page .register-page__inner {
   width: 700px;
   margin: 60px auto;
@@ -38,7 +39,7 @@
   font-weight: 200;
   
 }
-.register-page .register-page__header .btn {
+.register-page .register-page__header .btn-h {
   margin-top: 20px;
   color: white;
   background-color:black;
@@ -65,7 +66,7 @@
   letter-spacing: 1px;
   
 }
-.register-page .btn {
+.register-page .btn-h {
   display: inline-block;
   height: 45px;
   padding: 0 30px;
@@ -158,6 +159,7 @@
   height: 780px;
   width: 1150px;
   table-layout: auto;
+  background: linear-gradient( 225deg, green, #c4fff7);
 }
 
 h3 {
@@ -166,9 +168,7 @@ h3 {
 }
 
 
-th, td {
- 
-}
+
 
 thead, tbody {
   display: block;

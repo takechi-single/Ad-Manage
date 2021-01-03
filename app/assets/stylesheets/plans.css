@@ -1,0 +1,46 @@
+.plan-new  h1 {
+  padding: 0 auto;
+  margin: 0;
+  padding-left: 400px;
+  color: black;
+  font-weight: bold;
+}
+
+.plan-new {
+  display: flex;
+  flex-direction: column;
+  padding: 10px ;
+}
+
+.btn{
+  display: block;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 15px;
+  
+}
+
+.plan-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.target-select, .media-select, .title{
+  font-size: 16px;
+  border: 1px solid;
+  padding: 5px;
+  background-color: lightblue;
+  margin: 5px;
+  width: 450px;
+  text-align: center;
+}
+

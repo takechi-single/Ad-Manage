@@ -1,25 +1,15 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Ad-Manage</title>
-  </head>
-  <body>
-    <header>
+
+   
       <div class="header">
         <%= render "shared/header_top" %>
       </div>  
-    </div>  
-    <div class="main-wrapper">  
-      <div class="introduction">
-        <div class='actions'>
-          <%= link_to "新規登録", new_user_session_path, method: :get %>
-        </div>
+
+      <div class="main-wrapper">  
+      <div class="side-tools">
+        <%= render "shared/side_tools"%>
       </div>
-      <div class="main-manage">  
-        <%= render "shared/main_manage"%>
-      </div>
+      <%= render "shared/main_manage"%>
     </div>
-  </body>  
-</html>
+    
+ 
 

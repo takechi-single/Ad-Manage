@@ -39,7 +39,6 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-    @items = Item.all
-    
+    @items = Item.all 
   end
 end
