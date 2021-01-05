@@ -3,7 +3,7 @@
    <div class="tool1">     
       <div class="create-item">
         <% if user_signed_in? %>
-        <%= link_to "商品一覧表", item_path(@items.ids) %>
+        <%= link_to "商品一覧表", items_path %>
         <% else %>
         <%= link_to "新規登録", new_user_registration_path, method: :get %>
         <% end %>

@@ -1,9 +1,7 @@
 class PlansController < ApplicationController
-  before_action :set_item, only: [:index, :create, :new]
+  before_action :set_item, only: %i[index create new]
 
-  def index
-    
-  end
+  def index; end
 
   def new
     @plan = Plan.new
@@ -17,10 +15,10 @@ class PlansController < ApplicationController
     else
       render action: :new
     end
-    
   end
 
   private
+
   def plan_params
     params.require(:plan).permit(:when, :when_by, :where, :who, :with_whom, :target_id, :media_id, :why, :how_many, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
   end
@@ -29,5 +27,4 @@ class PlansController < ApplicationController
     @item = Item.find(params[:item_id])
     @items = Item.all
   end
-  
 end

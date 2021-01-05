@@ -160,6 +160,7 @@
   width: 1150px;
   table-layout: auto;
   background: linear-gradient( 225deg, green, #c4fff7);
+  text-align: center;
 }
 
 h3 {

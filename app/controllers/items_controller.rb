@@ -1,16 +1,14 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  before_action :set_item, only: [:index, :show, :edit, :new, :create]
-  def index
-  end
+  before_action :set_item, only: %i[index show edit new create]
+  def index; end
 
   def new
     @item = Item.new
-    
   end
 
   def create
-    #binding.pry
+    # binding.pry
     @item = Item.new(item_params)
     if @item.valid?
       @item.save
@@ -21,16 +19,12 @@ class ItemsController < ApplicationController
   end
 
   def show
-    
+    @str = Plan.group(:item_id).sum(:how_much)
   end
 
-  def update
-    
-  end
+  def update; end
 
-  def destroy
-    
-  end
+  def destroy; end
 
   private
 
@@ -39,6 +33,6 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-    @items = Item.all 
+    @items = Item.all
   end
 end

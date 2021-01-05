@@ -19,5 +19,4 @@ class Media < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :plan
-
-  end
+end
