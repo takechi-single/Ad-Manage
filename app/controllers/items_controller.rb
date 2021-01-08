@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  before_action :set_item, only: %i[index show edit new create]
-  def index; end
+  before_action :set_item, only: %i[index edit new create]
+  def index
+    
+  end  
 
   def new
     @item = Item.new
@@ -19,7 +21,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @str = Plan.group(:item_id).sum(:how_much)
+    @item = Item.find(params[:id])
+    
   end
 
   def update; end

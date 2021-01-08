@@ -7,9 +7,9 @@
 </div>
 
 <div class="main-item-index">
-      
-      <div class="plan-new">
       <h1>商材登録</h1>
+      <div class="plan-new">
+      
     
       <%= form_with(model: @item, url: items_path, local: true) do |f|%>
         <%= render 'error_messages', model: @item %>

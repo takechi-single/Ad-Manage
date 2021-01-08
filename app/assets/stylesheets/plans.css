@@ -31,7 +31,7 @@
   flex-direction: column;
   margin: 10px auto;
   flex-wrap: wrap;
-  text-align: center;
+  
 }
 
 .target-select, .media-select, .title{
