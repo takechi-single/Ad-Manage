@@ -36,7 +36,7 @@
                     <td width="10%"><%= item.price %></td>
                     <td width="10%"><%= item.relese_date %></td>
                     <td width="10%"><%= item.user.name %></td>
-                    <td width="15%"><%= link_to '詳細', item_path(item.id), method: :get %></td>
+                    <td width="15%"><%= link_to '詳細', item_plan_path(item.id, @plans.ids), method: :get %></td>
                   </tr>  
               <% end %>
             </table>  

@@ -2,11 +2,12 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_item, only: %i[index edit new create]
   def index
-    
+    @plans = Plan.all
   end  
 
   def new
     @item = Item.new
+  
   end
 
   def create
@@ -22,7 +23,6 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    
   end
 
   def update; end

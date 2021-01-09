@@ -1,27 +1,27 @@
 class PlansController < ApplicationController
-  before_action :set_item, only: %i[index create new]
+  before_action :set_item, only: %i[index create new show]
 
   def index
-    @item = Item.find(params[:item_id])
+    
   end
 
   def new
     @plan = Plan.new
+    @item = Item.find_by(params[:item_id])
   end
 
   def create
     @plan = Plan.new(plan_params)
     if @plan.valid?
       @plan.save
-      redirect_to "/items/#{plas.item.id}"
+      redirect_to "/items/#{plan.item.id}"
     else
       render action: :new
     end
   end
 
   def show
-    @plan = Plan.find(params[:plan_id])
-    @item = Item.find(params[:item_id])
+    @plan = Plan.find(params[:id])
   end
 
   private
