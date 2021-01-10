@@ -1,4 +1,4 @@
-class Item < ApplicationRecord
+class Item < ActiveRecord::Base
   with_options presence: true do
     validates :name
     validates :text

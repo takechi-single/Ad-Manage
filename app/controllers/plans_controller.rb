@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_action :set_item, only: %i[index create new show]
+  before_action :set_item, only: %i[index create new]
 
   def index
     
@@ -21,7 +21,8 @@ class PlansController < ApplicationController
   end
 
   def show
-    @plan = Plan.find(params[:id])
+    @item = Item.find(params[:item_id])
+    @plan = Plan.find_by(item_id: params[:item_id])
   end
 
   private
@@ -32,6 +33,6 @@ class PlansController < ApplicationController
 
   def set_item
     @item = Item.find(params[:item_id])
-    @items = Item.all
+    
   end
 end

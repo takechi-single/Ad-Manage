@@ -1,4 +1,4 @@
-class Plan < ApplicationRecord
+class Plan < ActiveRecord::Base
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :media
   belongs_to :target

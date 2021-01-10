@@ -22,7 +22,9 @@ class ItemsController < ApplicationController
   end
 
   def show
+    
     @item = Item.find(params[:id])
+    @plan = Plan.where(item_id: @item.id)
   end
 
   def update; end
