@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   def show
     
     @item = Item.find(params[:id])
-    @plan = Plan.where(item_id: @item.id)
+    @plan = Plan.find_by(item_id: @item.id)
   end
 
   def update; end
@@ -38,6 +38,6 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-    @items = Item.all
+    @items = Item.all.includes(:user)
   end
 end

@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   before_action :set_item, only: %i[index create new]
+  before_action :sales_sum, only: %i[show]
 
   def index
     
@@ -25,6 +26,7 @@ class PlansController < ApplicationController
     @plan = Plan.find_by(item_id: params[:item_id])
   end
 
+  
   private
 
   def plan_params
@@ -33,6 +35,11 @@ class PlansController < ApplicationController
 
   def set_item
     @item = Item.find(params[:item_id])
-    
   end
+
+  def sales_sum
+    @plan_sum = Plan.where(item_id: params[:item_id])
+    @total_price = @plan_sum.sum(:how_much)
+  end
+
 end
