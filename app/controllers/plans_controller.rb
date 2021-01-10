@@ -14,7 +14,7 @@ class PlansController < ApplicationController
     @plan = Plan.new(plan_params)
     if @plan.valid?
       @plan.save
-      redirect_to "/items/#{plan.item.id}"
+      redirect_to root_path
     else
       render action: :new
     end
