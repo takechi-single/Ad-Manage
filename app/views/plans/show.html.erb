@@ -1,4 +1,3 @@
-<header>
       <div class="header">
         <%= render "shared/header_top" %>
       </div>  
@@ -7,16 +6,75 @@
       <div class="side-tools">
         <%= render "shared/side_tools"%>
       </div>
+      <div class="plan-info">
+      <h11>プラン概要</h11>
+        <div class="item-plan">
+        
+        <div class ="item-show">
+          
+          <%= image_tag @item.image.variant(resize:'250x250') if @item.image.attached? %>
+          <h3><%= @item.name %></h3>
+        </div>  
 
-      <h11 class="name">
-      <%= @item.name %>
-      </h2>
-      <div class='item-img-content'>
-      <%= image_tag @item.image ,class:"item-box-img" %>
+
+        <div class="plan-show">
+              
+                <table >
+              <tbody>
+                <tr>
+                  <th class="detail-item">広告出稿時期</th>
+                  <td class="detail-value"><%= @plan.when %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">広告出稿期限</th>
+                  <td class="detail-value"><%= @plan.when_by %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">広告担当者</th>
+                  <td class="detail-value"><%= @plan.who %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">出稿場所</th>
+                  <td class="detail-value"><%= @plan.where %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">ターゲット層</th>
+                  <td class="detail-value"><%= @plan.target[:name] %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">広告媒体</th>
+                  <td class="detail-value"><%= @plan.media[:name] %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">広告出稿の理由</th>
+                  <td class="detail-value"><%= @plan.why %></td>
+                </tr>
+              </tbody>
+            </table>
+         </div>   
+        </div> 
+        <div class="statis"> 
+            <h3>
+              <span><%= "料金概要" %></span>
+            </h3>
+          <table class="detail-table">
+            <tbody>
+                <tr>
+                    <th class="detail-item">発送日の目安</th>
+                    <td class="detail-value"><%= @plan.how_many %></td>
+                </tr>
+                    <th class="detail-item">発送日の目安</th>
+                    <td class="detail-value"><%= @plan.how_much %></td>
+                </tr>
+                    <th class="detail-item">総広告費</th>
+                    <td class="detail-value"><%= @total_price %></td>
+                </tr>
+              </tbody>
+          </table>   
+        </div>   
+
+      </div>    
+    </div>      
+  
       
-      <%= @plan.who %>
-      <%= @plan.how_much %>
 
-      <%= @total_price %>
-
-    </div>

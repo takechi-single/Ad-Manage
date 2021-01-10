@@ -44,3 +44,38 @@
   text-align: center;
 }
 
+.plan-info {
+  height: 780px;
+  width: 1150px;
+  table-layout: auto;
+  background: linear-gradient( 225deg,white, #c4fff7);
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item-plan {
+  display: inline-flex;
+}
+
+.detail-item {
+  color: black;
+  background: linear-gradient( 225deg,white, #c4fff7);
+}
+
+.item-show{
+  padding: 50px 60px;
+}
+
+.detail-value {
+  width: 450px;
+}
+
+.plan-show {
+  height: 350px;
+  padding: 20px 70px;
+}
+
+.statis {
+  padding: 20px;
+}
