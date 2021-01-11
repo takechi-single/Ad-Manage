@@ -45,6 +45,7 @@
 }
 
 .plan-info {
+  padding: 5px;
   height: 780px;
   width: 1150px;
   table-layout: auto;

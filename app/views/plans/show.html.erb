@@ -72,6 +72,8 @@
               </tbody>
           </table>   
         </div>   
+      
+      <%= column_chart Plan.group(:item_id).sum(:how_much) %>
 
       </div>    
     </div>      
