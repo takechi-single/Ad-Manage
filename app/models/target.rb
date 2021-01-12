@@ -1,5 +1,4 @@
 class Target < ActiveHash::Base
-
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '男女4歳～12歳(幼年層)' },

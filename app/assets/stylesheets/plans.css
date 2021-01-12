@@ -1,15 +1,15 @@
 .plan-new  h1 {
-  padding: 0 auto;
-  margin: 0;
-  padding-left: 400px;
   color: black;
   font-weight: bold;
+  display: flex;
+  text-align: center
 }
 
 .plan-new {
-  display: flex;
+  text-align: center;
   flex-direction: column;
   padding: 10px ;
+  
 }
 
 .btn{
@@ -27,11 +27,11 @@
 
 .plan-box{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 5px;
+  margin: 10px auto;
   flex-wrap: wrap;
+  
 }
 
 .target-select, .media-select, .title{
@@ -44,3 +44,61 @@
   text-align: center;
 }
 
+.plan-info {
+  padding: 5px;
+  height: 780px;
+  width: 1150px;
+  table-layout: auto;
+  background: linear-gradient( 225deg,white, #c4fff7);
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item-plan {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  color: black;
+  background: linear-gradient( 225deg,white, #c4fff7);
+}
+
+.item-show{
+  padding: 10px 10px;
+}
+
+.detail-value {
+  width: 450px;
+}
+
+.plan-show {
+  height: 350px;
+  padding: 20px 70px;
+}
+
+.statis {
+  padding: 20px;
+}
+
+thead, tbody-plan {
+  display: block;
+  
+}
+tbody-plan{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+table th {
+  padding: 2px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  
+}
+
+
+table td {
+  padding: 5px 10px;
+}

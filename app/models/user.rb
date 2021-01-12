@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :manages
+  has_many :plans, through: :items
 end
