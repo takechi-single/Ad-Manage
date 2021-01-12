@@ -56,7 +56,8 @@
 }
 
 .item-plan {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .detail-item {
@@ -65,7 +66,7 @@
 }
 
 .item-show{
-  padding: 50px 60px;
+  padding: 10px 10px;
 }
 
 .detail-value {
@@ -79,4 +80,25 @@
 
 .statis {
   padding: 20px;
+}
+
+thead, tbody-plan {
+  display: block;
+  
+}
+tbody-plan{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+table th {
+  padding: 2px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  
+}
+
+
+table td {
+  padding: 5px 10px;
 }
