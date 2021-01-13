@@ -49,10 +49,11 @@
   height: 780px;
   width: 1150px;
   table-layout: auto;
-  background: linear-gradient( 225deg,white, #c4fff7);
+  background-color: white;
   text-align: center;
   display: flex;
   flex-flow: row wrap;
+  color: black;
 }
 
 .item-plan {
@@ -62,8 +63,9 @@
 
 .detail-item {
   color: black;
-  background: linear-gradient( 225deg,white, #c4fff7);
+  background-color: white;
 }
+
 
 .item-show{
   padding: 10px 10px;
@@ -92,8 +94,8 @@ tbody-plan{
 }
 table th {
   padding: 2px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-weight: bold;
   
 }

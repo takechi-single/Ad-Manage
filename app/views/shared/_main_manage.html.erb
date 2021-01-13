@@ -3,15 +3,17 @@
   <div class="media1">
     <div class="info1">
       <h11>Action</h11>
-      <p>レスポンスをもとに改善・対策をしよう！</p>
+      <%= link_to "商材登録", new_item_path(@user), method: :get, class: 'btn' %>
+      <p>広告出稿のプランを立てよう！</p>
       <a href="#">プロフィール</a>
     </div>
   </div>
   <div class="media2">
     <div class="info2">
       <h12>Plan</h12>
+      
+      <%= link_to "商材一覧", items_path, method: :get, class: 'btn' %>
       <p>広告出稿のプランを立てよう！</p>
-      <%= link_to "プラン作成はこちら", items_path, method: :get, class: 'btn' %>
     </div>
   </div>
   <div class="media3">

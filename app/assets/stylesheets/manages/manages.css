@@ -9,7 +9,7 @@ body {
 
 a {
   font-size: 14px;
-  color: white;
+  color: black;
   margin: 0 auto;
   text-align: center;
   
@@ -33,11 +33,7 @@ h1, h2{
   
 }
 
-h3,h4,h5,h6, {
-  padding: 10px 0;
-  margin: 0;
-  
-}
+
 
 ul,li {
   padding: 0;
@@ -51,6 +47,11 @@ ul,li {
   height: calc(100vh - 770px);
   display: flex;
   
+}
+
+.header a{
+  color: aliceblue;
+  text-decoration: none;
 }
 
 .heading {
@@ -79,15 +80,6 @@ li {
   
 }
 
-.side-tools {
-  background-color: black;
-  width: calc(100vw - 1150px);
-  height: 770px;
-  padding: 0 10px;
-  border: white solid 3px;
-  display: flex;
-  text-align: center;
-}
 
 .tool1 {
   display: flex;
@@ -129,7 +121,7 @@ li {
 
 .main-manage {
   background: linear-gradient( 45deg, #7bc6e2, #c4d4ff);
-  width: 1150px;
+  width: 100vw;
   overflow: scroll;
   display: flex;
   align-items: center;
@@ -142,34 +134,34 @@ li {
 }
 
 .all-media{
-  height: 7７0px;
-  width: 1150px;
+  height: 770px;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
 }
 
 .media1 {
   height: 385px;
-  width: 575px;
+  width: 50vw;
   background: linear-gradient( 135deg, red, #c4fff7);
   
 }
 .media2 {
   height: 385px;
-  width: 575px;
+  width: 50vw;
   background: linear-gradient( 225deg, green, #c4fff7);
   
 
 }
 .media3 {
   height: 385px;
-  width: 575px;
+  width: 50vw;
   background: linear-gradient( 45deg, yellow, #c4fff7);
 
 }
 .media4 {
   height: 385px;
-  width: 575px;
+  width: 50vw;
   background: linear-gradient( 315deg, blue,#c4fff7);
 
 }

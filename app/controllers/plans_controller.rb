@@ -42,4 +42,5 @@ class PlansController < ApplicationController
     @total_price = @plan_sum.sum(:how_much)
   end
 
+  
 end
