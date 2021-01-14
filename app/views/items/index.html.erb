@@ -11,32 +11,32 @@
       <h3>商材一覧</h3>
         <div class="container">
           <div class="item-index">
-            <table border="1" width="100%" >
+            <table border="1" >
             <thead>
-              <tr>
-                <th width="5%">No</th>
-                <th width="15.4%">商材画像</th>
-                <th width="15%">商材名称</th>
-                <th width="33%">商材詳細</th>
-                <th width="10%">希望小売価格</th>
-                <th width="10%">発売日</th>
-                <th width="10%">担当者名</th>
-                <th width="10%">Link</th>
-              </th>  
+                <th width="12.85%">No</th>
+                <th width="12.85%">商材名</th>
+                <th width="12.85%">商材画像</th>
+                <th width="12.85%">広告プラン作成</th>
+                <th width="12.85%">広告プラン一覧</th>
+                <th width="12.85%">商材詳細</th>
+                <th width="12.85%">商材編集</th>
+                <th width="12.85%">商材削除</th>
+              </tr>  
             </thead>
+            
             <tbody>
               <% @items.each.with_index(1) do |item, i| %>
-                 <tr>   
-                    <td width="5%"><%= link_to item.id, new_item_plan_path(item.id) %></td>
-                    <td width="15%"><%= image_tag item.image.variant(resize:'100x100') if item.image.attached? %></td>
-                    <td width="15%"><%= link_to item.name, item_path(item.id), method: :get %></td>
-                    <td width="33%"><%= item.text %></td>
-                    <td width="10%"><%= item.price %></td>
-                    <td width="10%"><%= item.relese_date %></td>
-                    <td width="10%"><%= item.user.name %></td>
-                    <td width="15%"><%= link_to '詳細', item_plan_path(item.id, @plans.ids), method: :get %></td>
+                    <td width="12.5%"><%= item.id %></td>
+                    <td width="12.5%"><%= item.name %></td>
+                    <td width="12.5%"><%= image_tag item.image.variant(resize:'100x100') if item.image.attached? %></td>
+                    <td width="12.5%"><%= link_to item.id, new_item_plan_path(item.id) %></td>
+                    <td width="12.5%"><%= link_to 'プラン詳細', item_plan_path(item.id, @plans.ids), method: :get %></td>
+                    <td width="12.5%"><%= link_to '商材詳細', item_path(item.id), method: :get %></td>
+                    <td width="12.5%"><%= link_to '商品の編集', edit_item_path(item.id), method: :get %></td>
+                    <td width="12.5%"><%= link_to '削除', item_path(item.id), method: :delete %></td>
                   </tr>  
               <% end %>
+               </tbody>
             </table>  
           </div>
         </div>    

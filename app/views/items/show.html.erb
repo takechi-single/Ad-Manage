@@ -6,14 +6,43 @@
     </div>  
     <div class="main-wrapper">  
       
+<div class="plan-info">
+      <h11>プラン概要</h11>
+      <div class="item-plan">
+        
+        <div class ="item-show">
+          
+          <%= image_tag @item.image.variant(resize:'250x250') if @item.image.attached? %>
+          <h3><%= @item.name %></h3>
+        </div>  
 
-      <h11 class="name">
-      <%= @item.name %>
-      </h2>
-     
-      <%= @item.price %>
-      <%#= @plan.why %>
-      <%#= @plan.how_much %>
+
+        <div class="plan-show">
+              
+                <table >
+              <tbody>
+                <tr>
+                  <th class="detail-item">商材詳細</th>
+                  <td class="detail-value"><%= @item.text %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">希望小売価格</th>
+                  <td class="detail-value"><%= @item.price %></td>
+                </tr>
+                <tr>
+                  <th class="detail-item">発売日</th>
+                  <td class="detail-value"><%= @item.relese_date %></td>
+                </tr>
+                
+              </tbody>
+            </table>
+         </div>   
+        
+          
+      
+       <%= column_chart Plan.group(:item_id).sum(:how_much) %>
+      </div> 
+      </div>   
       
 
 

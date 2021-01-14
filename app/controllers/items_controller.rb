@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_item, only: %i[index edit new create]
+  before_action :find_item, only: [:edit, :update, :destroy]
+
   def index
     @plans = Plan.all
   end  
@@ -27,9 +29,21 @@ class ItemsController < ApplicationController
     @plan = Plan.find_by(item_id: @item.id)
   end
 
-  def update; end
+  def destroy
+    @item.destroy
+    redirect_to action: :index
+  end
 
-  def destroy; end
+  def edit; end
+
+  def update
+    @item.update(item_params)
+    if @item.valid?
+      redirect_to action: :index
+    else
+      render action: :edit, alert: @item.errors.full_messages
+    end
+  end
 
   private
 
@@ -39,5 +53,9 @@ class ItemsController < ApplicationController
 
   def set_item
     @items = Item.all.includes(:user)
+  end
+
+  def find_item
+    @item = Item.find(params[:id])
   end
 end

@@ -1,0 +1,48 @@
+<div class="header">
+        <%= render "shared/header_top" %>
+</div>
+<div class="main-wrapper">  
+     
+
+<div class="main-item-index">
+      <h1>商材登録</h1>
+      <div class="plan-new">
+      
+    
+      <%= form_with(model: @item, url: item_path, local: true) do |f|%>
+        <%= render 'error_messages', model: @item %>
+        <div class="plan-box">
+        
+                <%= f.label :商材画像%>
+          
+            <%= f.file_field :image, id:"item-image", class:"title", placeholder:"テキスト"  %>
+         
+         
+            <%= f.label :商材名%>
+          
+            <%= f.text_field :name, class:"title", placeholder:"テキスト" %>
+          
+          
+            <%= f.label :商材詳細%>
+          
+            <%= f.text_field :text, class:"title", placeholder:"テキスト" %>
+          
+            <%= f.label :希望小売価格%>
+          
+            <%= f.text_field :price, class:"title", placeholder:"テキスト" %>
+          
+            <%= f.label :発売日%>
+          
+            <%= f.date_field :relese_date, class:"title", placeholder:"テキスト" %>
+          
+        
+       
+        
+          <%= f.submit "商材編集完了", class: 'btn'%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+ </div>
