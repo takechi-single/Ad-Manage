@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: %i[index show]
+  before_action :authenticate_user!, except: %i[new edit]
   before_action :set_item, only: %i[index edit new create]
   before_action :find_item, only: [:edit, :update, :destroy]
+  before_action :set_confirm, only: [:edit, :destroy]
 
   def index
     @plans = Plan.all
@@ -57,5 +58,9 @@ class ItemsController < ApplicationController
 
   def find_item
     @item = Item.find(params[:id])
+  end
+
+  def set_confirm
+    redirect_to action: :index if current_user.id != @item.user_id
   end
 end

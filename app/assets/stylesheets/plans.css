@@ -84,11 +84,11 @@
   padding: 20px;
 }
 
-thead, tbody-plan {
+thead, tbody {
   display: block;
   
 }
-tbody-plan{
+tbody{
   overflow-x: hidden;
   overflow-y: scroll;
 }

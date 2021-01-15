@@ -21,39 +21,34 @@
               <tbody>
                 <tr>
                   <th class="detail-item">広告出稿時期</th>
-                  <td class="detail-value"><%= @plan.when %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告出稿期限</th>
-                  <td class="detail-value"><%= @plan.when_by %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告担当者</th>
-                  <td class="detail-value"><%= @plan.who %></td>
+                  <td class="detail-value"><%= @plan.when if @plan.present? %></td>
                 </tr>
                 <tr>
                   <th class="detail-item">出稿場所</th>
-                  <td class="detail-value"><%= @plan.where %></td>
+                  <td class="detail-value"><%= @plan.where if @plan.present?%></td>
                 </tr>
                 <tr>
                   <th class="detail-item">ターゲット層</th>
-                  <td class="detail-value"><%= @plan.target[:name] %></td>
+                  <td class="detail-value"><%= @plan.target[:name] if @plan.present?%></td>
                 </tr>
                 <tr>
                   <th class="detail-item">広告媒体</th>
-                  <td class="detail-value"><%= @plan.media[:name] %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告出稿の理由</th>
-                  <td class="detail-value"><%= @plan.why %></td>
+                  <td class="detail-value"><%= @plan.media[:name] if @plan.present?%></td>
                 </tr>
               </tbody>
             </table>
          </div>   
         
           
+     
       
-       <%= column_chart Plan.group(:item_id).sum(:how_much) %>
+       <%= column_chart Plan.group(:item_id).sum(:how_much),width: "300px", height: "300px" %>
+
+       <%#= pie_chart Plan.group(@plan.media.name).pluck(:how_much), width: "500px", height: "300px" %>
+
+
+
+      
       </div> 
       </div>    
     </div>      
