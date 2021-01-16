@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px auto;
+  
   flex-wrap: wrap;
   
 }
@@ -47,7 +47,7 @@
 .plan-info {
   padding: 5px;
   height: 780px;
-  width: 1150px;
+  width: 100vw;
   table-layout: auto;
   background-color: white;
   text-align: center;
@@ -67,8 +67,11 @@
 }
 
 
-.item-show{
+.item-plan{
   padding: 10px 10px;
+  width: 100vw;
+  height: 250px;
+  display: flex;
 }
 
 .detail-value {
@@ -76,21 +79,31 @@
 }
 
 .plan-show {
-  height: 350px;
+  height: 250px;
   padding: 20px 70px;
+  display: block;
+  table-layout: auto;
+
 }
 
 .statis {
   padding: 20px;
 }
 
+.plan-info, h11{
+  
+  padding-top: 10px;
+  
+}
+
 thead, tbody {
   display: block;
   
 }
-tbody{
+.plan-show tbody  {
   overflow-x: hidden;
   overflow-y: scroll;
+  height: 200px;
 }
 table th {
   padding: 2px;

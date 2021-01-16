@@ -123,9 +123,12 @@ tbody {
   
   height: 680px;
 }
-table th td{
-  
-    
+
+.sarch-title{
+  display: flex;
+  justify-content: space-between;  
+  padding: 0 50px;
 }
+
 
 

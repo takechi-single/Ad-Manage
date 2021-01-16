@@ -4,6 +4,7 @@ class PlansController < ApplicationController
   before_action :item_back, only: %i[show]
 
   def index
+    @plans = Plan.all
   end
 
   def new
@@ -22,6 +23,7 @@ class PlansController < ApplicationController
   end
 
   def show
+    @plans = Plan.all
     @item = Item.find(params[:item_id])
     @plan = Plan.find_by(item_id: params[:item_id])
   end

@@ -18,9 +18,9 @@
         <%= f.label :出稿場所%>
         <%= f.text_field :where, class:"title", placeholder:"例）東京都中野区" %>
         <%= f.label :ターゲット層%>
-        <%= f.collection_select(:target_id, Target.all, :id, :name, {}, {class:"target-select"}) %>
+        <%= f.collection_select(:target_id, Target.all, :name, :name, {}, {class:"target-select"}) %>
         <%= f.label :広告媒体%>
-        <%= f.collection_select(:media_id, Media.all, :id, :name, {}, {class:"media-select"}) %>
+        <%= f.collection_select(:media_id, Media.all, :name, :name, {}, {class:"media-select"}) %>
         <%= f.label :広告出稿量（概算）%>
         <%= f.text_field :how_many, class:"title", placeholder:"例）400000" %>
         <%= f.label :広告費用（概算）%>
