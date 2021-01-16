@@ -4,7 +4,6 @@ class PlansController < ApplicationController
   before_action :item_back, only: %i[show]
 
   def index
-    
   end
 
   def new
@@ -27,11 +26,10 @@ class PlansController < ApplicationController
     @plan = Plan.find_by(item_id: params[:item_id])
   end
 
-  
   private
 
   def plan_params
-    params.require(:plan).permit(:when, :where,:with_whom, :target_id, :media_id, :how_many, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
+    params.require(:plan).permit(:when, :where, :with_whom, :target_id, :media_id, :how_many, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 
   def set_item
@@ -45,11 +43,5 @@ class PlansController < ApplicationController
   def sales_sum
     @plan_sum = Plan.where(item_id: params[:item_id])
     @total_price = @plan_sum.sum(:how_much)
-
   end
-
-  
-
-
-  
 end

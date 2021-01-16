@@ -10,12 +10,12 @@
       <div class="main-item-index">
       <h3>商材一覧</h3>
 
-      <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
-      <% end %>
-      
-        <div class="container">
+<%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+<%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+<%= form.submit "検索", class: "search-btn" %>
+<% end %>
+
+<div class="container">
           <div class="item-index">
             <table border="1" >
             <thead>
@@ -36,7 +36,7 @@
                     <td width="12.5%"><%= item.name %></td>
                     <td width="12.5%"><%= image_tag item.image.variant(resize:'80x80') if item.image.attached? %></td>
                     <td width="12.5%"><%= link_to item.id, new_item_plan_path(item.id) %></td>
-                    <td width="12.5%"><%= link_to 'プラン詳細', item_plan_path(item.id, @plans.ids), method: :get  %></td>
+                    <td width="12.5%"><%= link_to 'プラン詳細', item_plan_path(item.id, @plans.ids), method: :get if @plans.presence %></td>
                     <td width="12.5%"><%= link_to '商材詳細', item_path(item.id), method: :get %></td>
                     <td width="12.5%"><%= link_to '商品の編集', edit_item_path(item.id), method: :get %></td>
                     <td width="12.5%"><%= link_to '削除', item_path(item.id), method: :delete %></td>
@@ -45,7 +45,6 @@
                </tbody>
             </table>  
           </div>
+        </div>  
+         </div>
         </div>    
-      </div>
-
-    </div>

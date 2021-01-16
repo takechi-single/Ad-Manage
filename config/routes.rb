@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :items  do
     resources :plans, only: %i[index new create show]
     resources :manages, only: %i[index show new]
+    collection do
+      get 'search'
+    end
   end
 
   
