@@ -11,4 +11,12 @@ class Item < ActiveRecord::Base
   has_one_attached :image
   has_many :manages
   has_many :plan
+
+  def self.search(search)
+    if search != ''
+      Item.where('name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end

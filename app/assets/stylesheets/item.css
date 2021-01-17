@@ -90,20 +90,29 @@
 }
 
 .main-item-index {
+  padding: 30px 0px;
   height: 780px;
-  width: 1150px;
+  width: 100vw;
   table-layout: auto;
-  background: linear-gradient( 225deg, green, #c4fff7);
+  background-color: white;
   text-align: center;
+  color: black;
 }
 
 h3 {
  font-size: 24px;
+ padding: 30px 0;
  font-weight: bold;
 }
 
+.item-index {
+  width: 100%;
+  display: grid;
+}
 
-
+table {
+  width: 100%;
+}
 
 thead, tbody {
   display: block;
@@ -115,15 +124,12 @@ tbody {
   
   height: 680px;
 }
-table th {
-  padding: 2px;
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  
+
+.sarch-title{
+  display: flex;
+  justify-content: space-between;  
+  padding: 0 50px;
 }
 
 
-table td {
-  padding: 5px 10px;
-}
+

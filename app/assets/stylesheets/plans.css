@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px auto;
+  
   flex-wrap: wrap;
   
 }
@@ -45,15 +45,35 @@
 }
 
 .plan-info {
-  padding: 5px;
-  height: 780px;
-  width: 1150px;
-  table-layout: auto;
-  background: linear-gradient( 225deg,white, #c4fff7);
+  height: calc(100vh - 50px);
+  width: 100vw;
+  
+  background-color: white;
   text-align: center;
   display: flex;
-  flex-flow: row wrap;
+  
 }
+
+.item-tool {
+  padding-top: 20px;
+  height: calc(100vh - 50px);
+  width: 300px;
+  background-color: black;
+  border: solid 2px snow;
+  color: snow;
+}
+
+.item-tool li{
+  font-size: larger;
+}
+
+.plan-tool {
+  height: calc(100vh - 50px);
+  width: calc(100vw - 300px);
+  padding: 5px;
+  background: linear-gradient( 135deg, snow, #c4fff7);
+}
+
 
 .item-plan {
   display: flex;
@@ -62,11 +82,15 @@
 
 .detail-item {
   color: black;
-  background: linear-gradient( 225deg,white, #c4fff7);
+  background-color: white;
 }
 
-.item-show{
+
+.item-plan{
   padding: 10px 10px;
+  width: 100vw;
+  height: 250px;
+  display: flex;
 }
 
 .detail-value {
@@ -74,26 +98,36 @@
 }
 
 .plan-show {
-  height: 350px;
+  height: 250px;
   padding: 20px 70px;
+  display: block;
+  table-layout: auto;
+
 }
 
 .statis {
   padding: 20px;
 }
 
-thead, tbody-plan {
+
+thead, tbody {
   display: block;
   
 }
-tbody-plan{
+.plan-show tbody  {
   overflow-x: hidden;
   overflow-y: scroll;
+  height: 100px;
 }
+
+.plan-show table  {
+  width: 660px;
+}
+
 table th {
   padding: 2px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-weight: bold;
   
 }
@@ -101,4 +135,17 @@ table th {
 
 table td {
   padding: 5px 10px;
+}
+
+h4{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
+}
+
+.chart-sheet {
+  display: flex;
+  justify-content: space-around;
+  height: 500px;
 }

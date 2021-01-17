@@ -1,64 +1,76 @@
-      <div class="header">
+    <div class="header">
         <%= render "shared/header_top" %>
       </div>  
     </div>  
-    <div class="main-wrapper">  
-      <div class="side-tools">
-        <%= render "shared/side_tools"%>
-      </div>
-      <div class="plan-info">
-      <h11>プラン概要</h11>
-      <div class="item-plan">
-        
-        <div class ="item-show">
-          
-          <%= image_tag @item.image.variant(resize:'250x250') if @item.image.attached? %>
-          <h3><%= @item.name %></h3>
-        </div>  
-
-
-        <div class="plan-show">
-              
-                <table >
-              <tbody>
-                <tr>
-                  <th class="detail-item">広告出稿時期</th>
-                  <td class="detail-value"><%= @plan.when %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告出稿期限</th>
-                  <td class="detail-value"><%= @plan.when_by %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告担当者</th>
-                  <td class="detail-value"><%= @plan.who %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">出稿場所</th>
-                  <td class="detail-value"><%= @plan.where %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">ターゲット層</th>
-                  <td class="detail-value"><%= @plan.target[:name] %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告媒体</th>
-                  <td class="detail-value"><%= @plan.media[:name] %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告出稿の理由</th>
-                  <td class="detail-value"><%= @plan.why %></td>
-                </tr>
-              </tbody>
-            </table>
-         </div>   
-        
-          
+    <div class="plan-info">  
       
-       <%= column_chart Plan.group(:item_id).sum(:how_much) %>
-      </div> 
-      </div>    
-    </div>      
+      <%= render "shared/side_tools" %>
+        
+      <div class="plan-tool"> 
+      <h4>プラン詳細</h4>
+                
+              
+
+              <div class="chart-sheet">
+              
+                
+                <%= column_chart @plan_sum.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
+
+                <div class="sall-data">
+                  <table >
+                    <tbody>
+                      <tr>
+                        <th class="detail-item">ROAS（広告費用対効果）</th>
+                        <td class="detail-value"><%= 80 %></td>
+                      </tr>
+                      <tr>
+                        <th class="detail-item">「<%= @item.name %>」総広告費用</th>
+                        <td class="detail-value"><%= @total_price %>円</td>
+                      </tr>
+                      <tr>
+                        <th class="detail-item">「<%= @item.name %>」総売上</th>
+                        <td class="detail-value"><%= 1000000 %>円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <a>※ROAS=広告経由の売上÷広告費用（%）</a>
+                </div>
+              </div>  
+              <div class="plan-show">
+                   <table border="1" >
+                    <thead>
+                        <th>出稿日</th>
+                        <th>出稿エリア</th>
+                        <th>ターゲット層</th>
+                        <th>出稿媒体</th>
+                        <th>広告出稿量</th>
+                        <th>広告出稿料金</th>
+                      </tr>  
+                    </thead>
+                    
+                    <tbody>
+                      <% @plan_sum.each do |plan| %>
+                            <td><%= plan.when %></td>
+                            <td><%= plan.where %></td>
+                            <td><%= plan.target_id %></td>
+                            <td><%= plan.media_id %></td>
+                            <td><%= plan.how_many %></td>
+                            <td><%= plan.how_much %>円</td>
+                          </tr>  
+                      <% end %>
+                      </tbody>
+                    </table>  
+
+                  
+                </div>  
+      </div>
+        
+    </div>    
+
+      
+      
+       
+         
   
       
 

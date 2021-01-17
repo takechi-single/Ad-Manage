@@ -1,4 +1,4 @@
- <div class="header">
+<div class="header">
         <%= render "shared/header_top" %>
 </div>
 <div class="main-wrapper">  
@@ -9,7 +9,7 @@
       <div class="plan-new">
       
     
-      <%= form_with(model: @item, url: items_path, local: true) do |f|%>
+      <%= form_with(model: @item, url: item_path, local: true) do |f|%>
         <%= render 'error_messages', model: @item %>
         <div class="plan-box">
         
@@ -38,7 +38,7 @@
         
        
         
-          <%= f.submit "商材登録完了", class: 'btn'%>
+          <%= f.submit "商材編集完了", class: 'btn'%>
         </div>
       </div>
     <% end %>
@@ -46,5 +46,3 @@
 </div>
 
  </div>
-  
-
