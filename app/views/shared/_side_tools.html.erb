@@ -7,7 +7,7 @@
                   <h3><%= @item.name %></h3>
 
                   <ul class="item-lists">
-                    <p>＜商材商材＞</p>
+                    <p>＜商材詳細＞</p>
                     <li class="item-list"><%= @item.text %></li>
                     <p>＜希望小売価格＞</p>
                     <li class="item-list"><%= @item.price %>円</li>
@@ -15,7 +15,8 @@
                     <li class="item-list"><%= @item.relese_date %></li>
       
                   </ul>
-              
+                  <%= link_to '売上の入力', edit_item_path(@item.id), method: :get, class: 'btn' %>
+                  <%= link_to 'ROASを見る', edit_item_path(@item.id), method: :get, class: 'btn' %>  
                 </div>
 
                 

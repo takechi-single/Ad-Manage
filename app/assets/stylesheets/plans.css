@@ -70,6 +70,8 @@
 .plan-tool {
   height: calc(100vh - 50px);
   width: calc(100vw - 300px);
+  padding: 5px;
+  background: linear-gradient( 135deg, snow, #c4fff7);
 }
 
 
@@ -115,8 +117,13 @@ thead, tbody {
 .plan-show tbody  {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 200px;
+  height: 100px;
 }
+
+.plan-show table  {
+  width: 660px;
+}
+
 table th {
   padding: 2px;
   background-color: white;
@@ -128,4 +135,11 @@ table th {
 
 table td {
   padding: 5px 10px;
+}
+
+h4{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  text-align: left;
 }

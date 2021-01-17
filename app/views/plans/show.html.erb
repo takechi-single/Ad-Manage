@@ -7,28 +7,33 @@
       <%= render "shared/side_tools" %>
         
       <div class="plan-tool"> 
-
+      <h4>プラン詳細</h4>
                 <div class="plan-show">
-                   <table >
-                      <tbody>
-                        <tr>
-                          <th class="detail-item">広告出稿時期</th>
-                          <td class="detail-value"><%= @plan.when if @plan.present? %></td>
-                        </tr>
-                        <tr>
-                          <th class="detail-item">出稿場所</th>
-                          <td class="detail-value"><%= @plan.where if @plan.present?%></td>
-                        </tr>
-                        <tr>
-                          <th class="detail-item">ターゲット層</th>
-                          <td class="detail-value"><%= @plan.target_id if @plan.present?%></td>
-                        </tr>
-                        <tr>
-                          <th class="detail-item">広告媒体</th>
-                          <td class="detail-value"><%= @plan.media_id if @plan.present?%></td>
-                        </tr>
+                   <table border="1" >
+                    <thead>
+                        <th>出稿日</th>
+                        <th>出稿エリア</th>
+                        <th>ターゲット層</th>
+                        <th>出稿媒体</th>
+                        <th>広告出稿量</th>
+                        <th>広告出稿料金</th>
+                      </tr>  
+                    </thead>
+                    
+                    <tbody>
+                      <% @plan_sum.each do |plan| %>
+                            <td><%= plan.when %></td>
+                            <td><%= plan.where %></td>
+                            <td><%= plan.target_id %></td>
+                            <td><%= plan.media_id %></td>
+                            <td><%= plan.how_many %></td>
+                            <td><%= plan.how_much %>円</td>
+                          </tr>  
+                      <% end %>
                       </tbody>
-                    </table>
+                    </table>  
+
+                  
                 </div>  
               
 
