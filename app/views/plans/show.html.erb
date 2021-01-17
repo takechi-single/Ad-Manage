@@ -8,7 +8,35 @@
         
       <div class="plan-tool"> 
       <h4>プラン詳細</h4>
-                <div class="plan-show">
+                
+              
+
+              <div class="chart-sheet">
+              
+                
+                <%= column_chart @plan_sum.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
+
+                <div class="sall-data">
+                  <table >
+                    <tbody>
+                      <tr>
+                        <th class="detail-item">ROAS（広告費用対効果）</th>
+                        <td class="detail-value"><%= 80 %></td>
+                      </tr>
+                      <tr>
+                        <th class="detail-item">「<%= @item.name %>」総広告費用</th>
+                        <td class="detail-value"><%= @total_price %>円</td>
+                      </tr>
+                      <tr>
+                        <th class="detail-item">「<%= @item.name %>」総売上</th>
+                        <td class="detail-value"><%= 1000000 %>円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <a>※ROAS=広告経由の売上÷広告費用（%）</a>
+                </div>
+              </div>  
+              <div class="plan-show">
                    <table border="1" >
                     <thead>
                         <th>出稿日</th>
@@ -35,15 +63,6 @@
 
                   
                 </div>  
-              
-
-              <div class="chart-sheet">
-              
-                <%= @total_price%>
-                <%= column_chart @plan_sum.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
-
-                <%= pie_chart @plan_sum.group(:target_id).sum(:how_much), width: "500px", height: "300px" %>
-              </div>  
       </div>
         
     </div>    

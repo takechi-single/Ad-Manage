@@ -143,3 +143,9 @@ h4{
   color: black;
   text-align: left;
 }
+
+.chart-sheet {
+  display: flex;
+  justify-content: space-around;
+  height: 500px;
+}
