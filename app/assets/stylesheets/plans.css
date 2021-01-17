@@ -45,16 +45,33 @@
 }
 
 .plan-info {
-  padding: 5px;
-  height: 780px;
+  height: calc(100vh - 50px);
   width: 100vw;
-  table-layout: auto;
+  
   background-color: white;
   text-align: center;
   display: flex;
-  flex-flow: row wrap;
-  color: black;
+  
 }
+
+.item-tool {
+  padding-top: 20px;
+  height: calc(100vh - 50px);
+  width: 300px;
+  background-color: black;
+  border: solid 2px snow;
+  color: snow;
+}
+
+.item-tool li{
+  font-size: larger;
+}
+
+.plan-tool {
+  height: calc(100vh - 50px);
+  width: calc(100vw - 300px);
+}
+
 
 .item-plan {
   display: flex;
@@ -90,11 +107,6 @@
   padding: 20px;
 }
 
-.plan-info, h11{
-  
-  padding-top: 10px;
-  
-}
 
 thead, tbody {
   display: block;

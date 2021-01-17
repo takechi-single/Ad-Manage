@@ -1,25 +1,25 @@
 
+   <div class="item-tool">     
+     
+                <div class ="item-show">
+                  
+                  <%= image_tag @item.image.variant(resize:'250x250') if @item.image.attached? %>
+                  <h3><%= @item.name %></h3>
 
-   <div class="tool1">     
-      <div class="create-item">
-        <% if user_signed_in? %>
-        <%= link_to "商品一覧", items_path %>
-        <% else %>
-        <%= link_to "新規登録", new_user_registration_path, method: :get %>
-        <% end %>
-      </div>
-      <div class="create-item">
-        <% if user_signed_in? %>
-        <%= link_to "商材登録", new_item_path(@user) %>
-         <% else %>
-        <%= link_to "ログイン", new_user_session_path, method: :get %>
-        <% end %>
-      </div>
+                  <ul class="item-lists">
+                    <p>＜商材商材＞</p>
+                    <li class="item-list"><%= @item.text %></li>
+                    <p>＜希望小売価格＞</p>
+                    <li class="item-list"><%= @item.price %>円</li>
+                    <p>＜発売日＞</p>
+                    <li class="item-list"><%= @item.relese_date %></li>
       
-      <div class="create-item">
-        <%= link_to "ホームへ戻る", "/", method: :get %>
-      </div>
-  </div>
+                  </ul>
+              
+                </div>
+
+                
+              
+      
   
-  <div class="tools2">
   </div>

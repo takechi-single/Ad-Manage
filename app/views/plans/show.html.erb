@@ -1,58 +1,52 @@
-      <div class="header">
+    <div class="header">
         <%= render "shared/header_top" %>
       </div>  
     </div>  
-    <div class="main-wrapper">  
+    <div class="plan-info">  
       
-      <div class="plan-info">
-      <h11>プラン概要</h11>
-      <div class="item-plan">
+      <%= render "shared/side_tools" %>
         
-        
-        <div class ="item-show">
-          
-          <%= image_tag @item.image.variant(resize:'250x250') if @item.image.attached? %>
-          <h3><%= @item.name %></h3>
-       
-        </div>
+      <div class="plan-tool"> 
 
-        <div class="plan-show">
+                <div class="plan-show">
+                   <table >
+                      <tbody>
+                        <tr>
+                          <th class="detail-item">広告出稿時期</th>
+                          <td class="detail-value"><%= @plan.when if @plan.present? %></td>
+                        </tr>
+                        <tr>
+                          <th class="detail-item">出稿場所</th>
+                          <td class="detail-value"><%= @plan.where if @plan.present?%></td>
+                        </tr>
+                        <tr>
+                          <th class="detail-item">ターゲット層</th>
+                          <td class="detail-value"><%= @plan.target_id if @plan.present?%></td>
+                        </tr>
+                        <tr>
+                          <th class="detail-item">広告媒体</th>
+                          <td class="detail-value"><%= @plan.media_id if @plan.present?%></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>  
               
-                <table >
-              <tbody>
-                <tr>
-                  <th class="detail-item">広告出稿時期</th>
-                  <td class="detail-value"><%= @plan.when if @plan.present? %></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">出稿場所</th>
-                  <td class="detail-value"><%= @plan.where if @plan.present?%></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">ターゲット層</th>
-                  <td class="detail-value"><%= @plan.target_id if @plan.present?%></td>
-                </tr>
-                <tr>
-                  <th class="detail-item">広告媒体</th>
-                  <td class="detail-value"><%= @plan.media_id if @plan.present?%></td>
-                </tr>
-              </tbody>
-            </table>
-         </div>   
-         </div>  
+
+              <div class="chart-sheet">
+              
+                <%= @total_price%>
+                <%= column_chart @plan_sum.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
+
+                <%= pie_chart @plan_sum.group(:target_id).sum(:how_much), width: "500px", height: "300px" %>
+              </div>  
+      </div>
+        
+    </div>    
+
+      
+      
+       
          
-      
-       <%= @total_price%>
-       <%= column_chart @plan_sum.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
-
-       <%= pie_chart @plan_sum.group(:media_id).sum(:item_id), width: "500px", height: "300px" %>
-
-      </div>
-
-      </div>
-      
-      </div>    
-    </div>      
   
       
 
