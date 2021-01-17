@@ -42,10 +42,10 @@
          </div>  
          
       
-       <%= %>
-       <%= column_chart Plan.group(:item_id).sum(:how_much),width: "300px", height: "300px" %>
+       <%= @total_price%>
+       <%= column_chart @plan_sum.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
 
-       <%= pie_chart Plan.group(:media_id).sum(:how_much), width: "500px", height: "300px" %>
+       <%= pie_chart @plan_sum.group(:media_id).sum(:item_id), width: "500px", height: "300px" %>
 
       </div>
 
