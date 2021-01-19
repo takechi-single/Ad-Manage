@@ -45,6 +45,8 @@
                         <th>出稿媒体</th>
                         <th>広告出稿量</th>
                         <th>広告出稿料金</th>
+                        <th>プラン編集</th>
+                        <th>プラン削除</th>
                       </tr>  
                     </thead>
                     
@@ -56,6 +58,8 @@
                             <td><%= plan.media_id %></td>
                             <td><%= plan.how_many %></td>
                             <td><%= plan.how_much %>円</td>
+                            <td><%= link_to '編集', edit_item_plan_path(@item, @plan), method: :get %></td>
+                            <td><%= link_to '削除', item_plan_path(@item, @plan), method: :delete %></td>
                           </tr>  
                       <% end %>
                       </tbody>

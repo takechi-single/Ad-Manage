@@ -40,7 +40,11 @@
                     <td width="12.5%"><%= item.name %></td>
                     <td width="12.5%"><%= image_tag item.image.variant(resize:'80x80') if item.image.attached? %></td>
                     <td width="12.5%"><%= link_to item.id, new_item_plan_path(item.id) %></td>
-                    <td width="12.5%"><%= link_to 'プラン詳細', item_plan_path(item.id, @plans.ids), method: :get if @plans.present? %></td>
+                    <% if @plan_sum == nil? %>
+                    <%= "プランが登録されていません" %>
+                    <% else %>
+                    <td width="12.5%"><%= link_to 'プラン詳細', item_plan_path(item.id, @plans.ids), method: :get %></td>
+                    <% end %>
                     <td width="12.5%"><%= link_to '商材詳細', item_path(item.id), method: :get %></td>
                     <td width="12.5%"><%= link_to '商品の編集', edit_item_path(item.id), method: :get %></td>
                     <td width="12.5%"><%= link_to '削除', item_path(item.id), method: :delete %></td>

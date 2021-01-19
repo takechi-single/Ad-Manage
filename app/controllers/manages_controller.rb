@@ -9,6 +9,14 @@ class ManagesController < ApplicationController
     @items = Item.all.includes(:user)
   end
 
+  def new
+    
+  end
+
+  def create
+    
+  end
+
   private
 
   def set_item

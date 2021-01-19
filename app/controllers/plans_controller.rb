@@ -1,7 +1,9 @@
 class PlansController < ApplicationController
-  before_action :set_item, only: %i[index create new]
+  before_action :set_item, only: %i[index create new show]
   before_action :sales_sum, only: %i[show]
-  before_action :item_back, only: %i[show]
+  before_action :item_back, only: %i[show edit update destroy]
+  before_action :find_plan, only: [:edit, :update, :destroy]
+  before_action :set_confirm, only: [:edit, :destroy]
 
   def index
     @plans = Plan.all
@@ -24,8 +26,25 @@ class PlansController < ApplicationController
 
   def show
     @plans = Plan.all
-    @item = Item.find(params[:item_id])
     @plan = Plan.find_by(item_id: params[:item_id])
+  end
+
+  def edit
+    
+  end
+
+  def update
+    @plan.update(plan_params)
+    if @plan.valid?
+      redirect_to action: :show
+    else
+      render action: :edit, alert: @plan.errors.full_messages
+    end
+  end
+
+  def destroy
+    @plan.destroy
+    redirect_to action: :show
   end
 
   private
@@ -36,6 +55,14 @@ class PlansController < ApplicationController
 
   def set_item
     @item = Item.find(params[:item_id])
+  end
+
+  def find_plan
+    @plan = Plan.find(params[:id])
+  end
+
+  def set_confirm
+    redirect_to action: :index if current_user.id != @plan.user_id
   end
 
   def item_back

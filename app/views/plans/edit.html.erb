@@ -1,0 +1,36 @@
+<div class="header">
+        <%= render "shared/header_top" %>
+      </div>  
+    
+    <div class="main-wrapper">  
+      
+
+      
+      <div class="main-item-index">
+      
+      <div class="plan-new">
+        <h1>広告プランを作成する</h1><p>下記フォームに必要事項を入力してください　※空欄可</p>
+        <%= form_with model: @plan, url:item_plans_path, local: true do |f| %>
+        <div class="plan-box">
+        <%= f.label :広告出稿時期%>
+        <%= f.date_field :when, class:"title", placeholder:"テキスト" %>
+        <%= f.label :出稿場所%>
+        <%= f.text_field :where, class:"title", placeholder:"例）東京都中野区" %>
+        <%= f.label :ターゲット層%>
+        <%= f.collection_select(:target_id, Target.all, :name, :name, {}, {class:"target-select"}) %>
+        <%= f.label :広告媒体%>
+        <%= f.collection_select(:media_id, Media.all, :name, :name, {}, {class:"media-select"}) %>
+        <%= f.label :広告出稿量（概算）%>
+        <%= f.text_field :how_many, class:"title", placeholder:"例）400000" %>
+        <%= f.label :広告費用（概算）%>
+        <%= f.text_field :how_much, class:"title", placeholder:"例）2500000" %>
+        <%= f.submit "プランを修正する" ,class:"btn" %>
+        </div>
+        <% end %>
+
+      </div>
+
+
+      </div>
+
+    </div>
