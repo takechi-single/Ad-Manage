@@ -15,7 +15,7 @@
                     <li class="item-list"><%= @item.relese_date %></li>
       
                   </ul>
-                  <%= link_to '売上の入力', edit_item_path(@item.id), method: :get, class: 'btn' %>
+                  <%= link_to '売上の入力', new_item_manage_path(@item.id), method: :get, class: 'btn' %>
                   <%= link_to 'ROASを見る', edit_item_path(@item.id), method: :get, class: 'btn' %>  
                 </div>
 

@@ -20,20 +20,20 @@
                   <table >
                     <tbody>
                       <tr>
-                        <th class="detail-item">ROAS（広告費用対効果）</th>
-                        <td class="detail-value"><%= 80 %></td>
+                        <th class="detail-item">ROAS</th>
+                        <td class="detail-value"><%= @roas %> %</td>
                       </tr>
                       <tr>
                         <th class="detail-item">「<%= @item.name %>」総広告費用</th>
-                        <td class="detail-value"><%= @total_price %>円</td>
+                        <td class="detail-value"><%= @total_price.to_s(:delimited) %> 円</td>
                       </tr>
                       <tr>
-                        <th class="detail-item">「<%= @item.name %>」総売上</th>
-                        <td class="detail-value"><%= 1000000 %>円</td>
+                        <th class="detail-item">「<%= @item.name %>」広告経由の売上</th>
+                        <td class="detail-value"><%= @sales.to_s(:delimited) %> 円</td>
                       </tr>
                     </tbody>
                   </table>
-                  <a>※ROAS=広告経由の売上÷広告費用（%）</a>
+                  <a>※ROAS（広告費用対効果）=広告経由の売上÷広告費用（%）</a>
                 </div>
               </div>  
               <div class="plan-show">
@@ -45,6 +45,8 @@
                         <th>出稿媒体</th>
                         <th>広告出稿量</th>
                         <th>広告出稿料金</th>
+                        <th>プラン編集</th>
+                        <th>プラン削除</th>
                       </tr>  
                     </thead>
                     
@@ -56,6 +58,8 @@
                             <td><%= plan.media_id %></td>
                             <td><%= plan.how_many %></td>
                             <td><%= plan.how_much %>円</td>
+                            <td><%= link_to '編集', edit_item_plan_path(@item, @plan), method: :get %></td>
+                            <td><%= link_to '削除', item_plan_path(@item, @plan), method: :delete %></td>
                           </tr>  
                       <% end %>
                       </tbody>
