@@ -45,10 +45,7 @@ ActiveRecord::Schema.define(version: 2021_01_02_010447) do
   end
 
   create_table "manages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "media1_id", null: false
-    t.integer "media2_id", null: false
-    t.integer "media3_id", null: false
-    t.integer "media4_id", null: false
+    t.integer "profit", null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false

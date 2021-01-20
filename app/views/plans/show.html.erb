@@ -21,7 +21,7 @@
                     <tbody>
                       <tr>
                         <th class="detail-item">ROAS（広告費用対効果）</th>
-                        <td class="detail-value"><%= 80 %></td>
+                        <td class="detail-value"><%= @roas %> %</td>
                       </tr>
                       <tr>
                         <th class="detail-item">「<%= @item.name %>」総広告費用</th>
@@ -29,7 +29,7 @@
                       </tr>
                       <tr>
                         <th class="detail-item">「<%= @item.name %>」総売上</th>
-                        <td class="detail-value"><%= 1000000 %>円</td>
+                        <td class="detail-value"><%= @sales %>円</td>
                       </tr>
                     </tbody>
                   </table>
