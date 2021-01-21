@@ -17,12 +17,18 @@
   width: 150px;
   padding: 10px;
   border: 1px solid white;
-  background-color: orange;
+  background-color: lightskyblue;
   color: white;
   text-decoration: none;
   text-align: center;
-  margin-top: 15px;
-  
+}
+
+.btn-a {
+  background-color: lightseagreen;
+}
+
+.btn-b {
+  background-color: lightsalmon;
 }
 
 .plan-box{
