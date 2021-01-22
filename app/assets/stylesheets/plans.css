@@ -35,9 +35,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+  padding-top: 50px;
   flex-wrap: wrap;
-  
+}
+
+.btn-r {
+  margin-top: 30px;
+  background-color: aquamarine;
 }
 
 .target-select, .media-select, .title{
