@@ -12,13 +12,13 @@
   
 }
 
-.btn{
+.btn, .btn-a, .btn-b {
   display: block;
-  width: 150px;
-  padding: 10px;
+  
+  padding: 5px;
   border: 1px solid white;
   background-color: lightskyblue;
-  color: white;
+  
   text-decoration: none;
   text-align: center;
 }

@@ -12,7 +12,11 @@ a {
   color: black;
   margin: 0 auto;
   text-align: center;
-  
+}
+
+.heading a {
+  font-size: 20px;
+  color:white;
 }
 
 p{
