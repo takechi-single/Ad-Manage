@@ -27,11 +27,9 @@ class PlansController < ApplicationController
   def show
     @plans = Plan.all
     @plan = Plan.find_by(item_id: params[:item_id])
-   
   end
 
   def edit
-    
   end
 
   def update
@@ -76,9 +74,6 @@ class PlansController < ApplicationController
 
     @manage_sum = Manage.where(item_id: params[:item_id])
     @sales = @manage_sum.sum(:profit).to_i
-    @roas = sprintf("%.0f",(@sales.to_f/@total_price.to_f*100).to_f)
+    @roas = format('%.0f', (@sales.to_f / @total_price.to_f * 100).to_f)
   end
-
-
-  
 end

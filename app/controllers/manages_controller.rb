@@ -26,7 +26,7 @@ class ManagesController < ApplicationController
   private
 
   def manage_params
-    params.require(:manage).permit(:sale_date,:profit).merge(user_id: current_user.id, item_id: params[:item_id])
+    params.require(:manage).permit(:sale_date, :profit).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 
   def set_item

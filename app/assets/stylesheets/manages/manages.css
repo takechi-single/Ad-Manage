@@ -41,7 +41,7 @@ h1, h2{
 
 ul,li {
   padding-bottom: 15px;
-  color: white;
+  color: black;
   
 }
 
@@ -74,8 +74,9 @@ ul,li {
   justify-content: space-around;
 }
 
-li {
-  list-style: none;
+.nav-lists li {
+  
+  color: white;
 }
 
 

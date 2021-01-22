@@ -2,21 +2,24 @@
         <%= render "shared/header_top" %>
       </div>  
     
-    <div class="main-wrapper">  
-      
-
-      
+     
       <div class="main-item-index">
-      
+           <div class="sarch-title">
+        <h3> 売上の入力
+            </h3>
+             
+          </div>
+         
       <div class="plan-new">
-        <h1>売上を入力する</h1><p>下記フォームに必要事項を入力してください　※空欄可</p>
+        
         <%= form_with model: @manage, url:item_manages_path, local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
         <div class="plan-box">
         <%= f.label :売上日の入力%>
         <%= f.date_field :sale_date, class:"title", placeholder:"テキスト" %>
         <%= f.label :売上の入力）%>
         <%= f.text_field :profit, class:"title", placeholder:"例）2500000" %>
-        <%= f.submit "売上を作成する" ,class:"btn" %>
+        <%= f.submit "売上を作成する" ,class:"btn-r" %>
         </div>
         <% end %>
 
@@ -25,4 +28,4 @@
 
       </div>
 
-    </div>
+    
