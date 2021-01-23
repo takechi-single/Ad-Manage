@@ -135,13 +135,14 @@ thead, tbody {
 .plan-all tbody  {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 270px;
+  height: 160px;
+  padding-top: 40px;
 }
 
 .sale-data tbody  {
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 270px;
+  height: 150px;
 }
 .plan-all table  {
   width: calc(100vw - 800px);
@@ -153,9 +154,13 @@ thead, tbody {
   text-align: left;
 }
 
+.sale-data h2  {
+  padding-bottom: 30px;
+}
+
 .sale-data table  {
   width: calc(100vw - 1050px);
-  height: 270px;
+  height: 200px;
 }
 
 table th {
@@ -166,6 +171,16 @@ table th {
 .plan-all td{
   font-size: 12px;
   height: 20px;
+}
+
+.detail-item{
+  font-size: 15px;
+  text-align: center;
+}
+.detail-value {
+  font-size: 18px;
+  width: 250px;
+  font-weight: bolder;
 }
 
 table td {
@@ -193,5 +208,5 @@ h4{
 .sale-data {
   height: calc(100vh - 500px);
   width: calc(100vw - 350px);
-  padding: 20px;
+  padding-left: 60px;
 }
