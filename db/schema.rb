@@ -60,7 +60,6 @@ ActiveRecord::Schema.define(version: 2021_01_02_010447) do
     t.string "where", null: false
     t.string "target_id", null: false
     t.string "media_id", null: false
-    t.string "how_many", null: false
     t.string "how_much", null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false

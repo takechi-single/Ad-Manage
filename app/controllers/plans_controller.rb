@@ -49,7 +49,7 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:when, :where, :with_whom, :target_id, :media_id, :how_many, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
+    params.require(:plan).permit(:when, :where, :with_whom, :target_id, :media_id, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 
   def set_item

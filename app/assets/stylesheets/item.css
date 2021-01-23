@@ -85,6 +85,10 @@
   resize: none;
 }
 
+.item-list {
+  color: white;
+}
+
 .items-explain {
   margin-top: 2vh;
 }

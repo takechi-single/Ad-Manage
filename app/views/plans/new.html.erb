@@ -9,7 +9,7 @@
       <div class="main-item-index">
       
       <div class="sarch-title">
-        <h3> 広告出稿プランの作成
+        <h3> 広告出稿プラン作成
             </h3>
           
           </div>
@@ -26,8 +26,6 @@
         <%= f.collection_select(:target_id, Target.all, :name, :name, {}, {class:"target-select"}) %>
         <%= f.label :広告媒体%>
         <%= f.collection_select(:media_id, Media.all, :name, :name, {}, {class:"media-select"}) %>
-        <%= f.label :広告出稿量（概算）%>
-        <%= f.text_field :how_many, class:"title", placeholder:"例）400000" %>
         <%= f.label :広告費用（概算）%>
         <%= f.text_field :how_much, class:"title", placeholder:"例）2500000" %>
         <%= f.submit "プランを作成する" ,class:"btn-r" %>  

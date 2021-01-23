@@ -92,7 +92,7 @@
 
 .detail-item {
   color: black;
-  background-color: white;
+  
 }
 
 
@@ -108,9 +108,10 @@
 }
 
 .plan-show {
-  height: 250px;
-  padding: 20px 70px;
-  display: block;
+  height: calc(100vh - 500px);
+  width: calc(100vw - 310px);
+  padding: 10px;
+  display: flex;
   table-layout: auto;
 
 }
@@ -128,20 +129,44 @@ thead, tbody {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100px;
+  font-size: 15px;
 }
 
-.plan-show table  {
-  width: 660px;
+.plan-all tbody  {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 270px;
+}
+
+.sale-data tbody  {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 270px;
+}
+.plan-all table  {
+  width: calc(100vw - 800px);
+}
+
+.plan-show h2  {
+  color: black;
+  padding: 2px;
+  text-align: left;
+}
+
+.sale-data table  {
+  width: calc(100vw - 1050px);
+  height: 270px;
 }
 
 table th {
   padding: 2px;
-  background-color: white;
   color: black;
-  font-weight: bold;
-  
 }
 
+.plan-all td{
+  font-size: 12px;
+  height: 20px;
+}
 
 table td {
   padding: 5px 10px;
@@ -157,5 +182,16 @@ h4{
 .chart-sheet {
   display: flex;
   justify-content: space-around;
-  height: 500px;
+  height: 400px;
+}
+
+.plan-all {
+  height: calc(100vh - 500px);
+  width: calc(100vw - 450px);
+}
+
+.sale-data {
+  height: calc(100vh - 500px);
+  width: calc(100vw - 350px);
+  padding: 20px;
 }

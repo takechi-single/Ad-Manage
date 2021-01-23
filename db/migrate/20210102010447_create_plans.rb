@@ -5,7 +5,6 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.string :where,            null: false
       t.string :target_id,       null: false
       t.string :media_id,        null: false
-      t.string :how_many,         null: false
       t.string :how_much,         null: false
       t.references   :user,       null: false, foreign_key: true
       t.references   :item,       null: false, foreign_key: true
