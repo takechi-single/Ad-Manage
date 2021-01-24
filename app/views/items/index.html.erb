@@ -10,11 +10,13 @@
       <div class="sarch-title">
       <h3>商材一覧</h3>
 
+      <div class="item-in">
+      <td><%= link_to "商材登録", new_item_path(@user), method: :get, class: 'btn-s' %></td>
       <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
       <%= form.text_field :keyword, placeholder: "商材を検索する", class: "search-input" %>
       <%= form.submit "検索", class: "search-btn" %>
       <% end %>
-
+      </div>
       </div>
       
         <div class="container">
@@ -30,7 +32,6 @@
                     <td><%= link_to '広告プラン作成', new_item_plan_path(item.id), class: 'btn-a' %></td>
                     <td><%= link_to '広告出稿状況', item_plan_path(item.id, @plans.ids), method: :get, class: 'btn-a' if @plans.present? %></td>
                     <td><%= link_to '売上入力', new_item_manage_path(item.id), method: :get, class: 'btn-b' %></td>
-                    <td><%= link_to "商材登録", new_item_path(@user), method: :get, class: 'btn' %></td>
                     <td><%= link_to '商材詳細', item_path(item.id), method: :get, class: 'btn' %></td>
                     <td><%= link_to '商材削除', item_path(item.id), method: :delete, class: 'btn' %></td>
                   </tr>  

@@ -157,7 +157,7 @@ tbody {
   padding-top: 40px;
 }
 
-.btn-a,.btn-r ,.btn-b, .btn, a.btn, button.btn {
+.btn-a,.btn-r ,.btn-b, .btn, a.btn, button.btn,.btn-s  {
   font-size: 15px;
   font-weight: 450;
   line-height: 1.5;
@@ -179,7 +179,22 @@ tbody {
   border-radius: 0.5rem;
 }
 
+.item-in {
+  display: flex;
+  justify-content: space-between;
+}
 
+.search-form{
+  padding-left: 30px;
+}
+
+ .btn-s {
+  background-color: blueviolet;
+  margin: 20px;
+  padding: 20px;
+  align-items: center;
+  line-height: 50px;
+}
 
 
 
