@@ -1,44 +1,44 @@
 <div class="header">
         <%= render "shared/header_top" %>
 </div>
-<div class="main-wrapper">  
+  
      
 
 <div class="main-item-index">
-      <h1>新規登録</h1>
-      <div class="plan-new">
-      
-    
-    
+      <div class="sarch-title">
+        <h3> 新規登録
+        </h3>
+      </div>
       <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-        <%= devise_error_messages!%>
+        
+        <%= render 'shared/error_messages', model: f.object %>
         <div class="plan-box">
         
             <%= f.label :氏名%>
          
           
-            <%= f.text_field :name, class:"title", placeholder:"テキスト" %>
+            <%= f.text_field :name, class:"title", placeholder:"例）山田花子" %>
           
             <%= f.label :メールアドレス%>
           
-            <%= f.email_field :email, class:"title", placeholder:"テキスト"%>
+            <%= f.email_field :email, class:"title"%>
           
             <%= f.label :パスワード%>
             <i>(英数字8文字以上)</i>
           
-            <%= f.password_field :password, class:"title", placeholder:"テキスト"%>
+            <%= f.password_field :password, class:"title"%>
           
             <%= f.label :パスワード（確認用）%>
           
-            <%= f.password_field :password_confirmation, class:"title", placeholder:"テキスト"%>
+            <%= f.password_field :password_confirmation, class:"title"%>
           
         
-          <%= f.submit "登録完了", class: 'btn'%>
+          <%= f.submit "登録完了", class: 'btn-r'%>
         </div>
       </div>
     <% end %>
   </div>
 </div>
 
- </div>
+
 

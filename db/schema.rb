@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_01_02_010447) do
   end
 
   create_table "manages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "sale_date", null: false
     t.integer "profit", null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
@@ -59,7 +60,6 @@ ActiveRecord::Schema.define(version: 2021_01_02_010447) do
     t.string "where", null: false
     t.string "target_id", null: false
     t.string "media_id", null: false
-    t.string "how_many", null: false
     t.string "how_much", null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false

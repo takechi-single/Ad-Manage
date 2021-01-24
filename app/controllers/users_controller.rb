@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new
     if @user.valid?
       @user.save
-      redirect_to action: :index
+      redirect_to root_path
     end
   end
 

@@ -12,7 +12,11 @@ a {
   color: black;
   margin: 0 auto;
   text-align: center;
-  
+}
+
+.heading a {
+  font-size: 20px;
+  color:white;
 }
 
 p{
@@ -37,7 +41,7 @@ h1, h2{
 
 ul,li {
   padding-bottom: 15px;
-  color: white;
+  color: black;
   
 }
 
@@ -70,14 +74,11 @@ ul,li {
   justify-content: space-around;
 }
 
-li {
-  list-style: none;
+.nav-lists li  {
+  color: white;
 }
 
-.main-wrapper {
-  display: flex;
-  
-}
+
 
 
 .tool1 {

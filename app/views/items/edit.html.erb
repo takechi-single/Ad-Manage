@@ -1,12 +1,14 @@
 <div class="header">
         <%= render "shared/header_top" %>
 </div>
-<div class="main-wrapper">  
+
      
 
 <div class="main-item-index">
-      <h1>商材登録</h1>
-      <div class="plan-new">
+      <div class="sarch-title">
+        <h3> 商材編集
+        </h3>
+      </div>
       
     
       <%= form_with(model: @item, url: item_path, local: true) do |f|%>
@@ -38,11 +40,11 @@
         
        
         
-          <%= f.submit "商材編集完了", class: 'btn'%>
+          <%= f.submit "商材編集完了", class: 'btn-r'%>
         </div>
       </div>
     <% end %>
   </div>
 </div>
 
- </div>
+ 

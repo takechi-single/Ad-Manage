@@ -1,31 +1,36 @@
 <div class="header">
         <%= render "shared/header_top" %>
 </div>
-<div class="main-wrapper">  
+
       
 
 <div class="main-item-index">
-      <h1>ログイン</h1>
-      <div class="plan-new">
-      
-    </div>
-    
+      <div class="sarch-title">
+        <h3> ログイン
+        </h3>
+       
+      </div>  
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
-        <%= devise_error_messages!%>
+        <%= render 'shared/error_messages', model: f.object %>
+        
         <div class="plan-box">
+          <div class='login-flash-message'>
+            <%= flash[:notice] %>
+            <%= flash[:alert] %>
+          </div>
             <%= f.label :メールアドレス%>
           
-            <%= f.email_field :email, class:"title", placeholder:"テキスト" %>
+            <%= f.email_field :email, class:"title" %>
           
               <%= f.label :パスワード%>
               <i>(英数字8文字以上)</i>
             
-              <%= f.password_field :password, class:"title", placeholder:"テキスト" %>
+              <%= f.password_field :password, class:"title" %>
            
-            <%= f.submit "ログイン", class: 'btn'%>
+            <%= f.submit "ログイン", class: 'btn-r'%>
           </div>
         </div>
       <% end %>
     </div>
   </div>
-</div>
+

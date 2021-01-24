@@ -12,26 +12,36 @@
   
 }
 
-.btn{
+.btn, .btn-a, .btn-b {
   display: block;
-  width: 150px;
-  padding: 10px;
+  
+  padding: 5px;
   border: 1px solid white;
-  background-color: orange;
-  color: white;
+  background-color: lightskyblue;
+  
   text-decoration: none;
   text-align: center;
-  margin-top: 15px;
-  
+}
+
+.btn-a {
+  background-color: lightseagreen;
+}
+
+.btn-b {
+  background-color: lightsalmon;
 }
 
 .plan-box{
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+  padding-top: 50px;
   flex-wrap: wrap;
-  
+}
+
+.btn-r {
+  margin-top: 30px;
+  background-color: orange;
 }
 
 .target-select, .media-select, .title{
@@ -82,7 +92,7 @@
 
 .detail-item {
   color: black;
-  background-color: white;
+  
 }
 
 
@@ -98,9 +108,10 @@
 }
 
 .plan-show {
-  height: 250px;
-  padding: 20px 70px;
-  display: block;
+  height: calc(100vh - 500px);
+  width: calc(100vw - 310px);
+  padding: 10px;
+  display: flex;
   table-layout: auto;
 
 }
@@ -118,20 +129,59 @@ thead, tbody {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100px;
+  font-size: 15px;
 }
 
-.plan-show table  {
-  width: 660px;
+.plan-all tbody  {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 160px;
+  padding-top: 40px;
+}
+
+.sale-data tbody  {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 150px;
+}
+.plan-all table  {
+  width: calc(100vw - 800px);
+}
+
+.plan-show h2  {
+  color: black;
+  padding: 2px;
+  text-align: left;
+}
+
+.sale-data h2  {
+  padding-bottom: 30px;
+}
+
+.sale-data table  {
+  width: calc(100vw - 1050px);
+  height: 200px;
 }
 
 table th {
   padding: 2px;
-  background-color: white;
   color: black;
-  font-weight: bold;
-  
 }
 
+.plan-all td{
+  font-size: 12px;
+  height: 20px;
+}
+
+.detail-item{
+  font-size: 15px;
+  text-align: center;
+}
+.detail-value {
+  font-size: 18px;
+  width: 250px;
+  font-weight: bolder;
+}
 
 table td {
   padding: 5px 10px;
@@ -147,5 +197,20 @@ h4{
 .chart-sheet {
   display: flex;
   justify-content: space-around;
-  height: 500px;
+  height: 400px;
+}
+
+.chart1, .chart2 {
+  padding-top: 50px;
+}
+
+.plan-all {
+  height: calc(100vh - 500px);
+  width: calc(100vw - 450px);
+}
+
+.sale-data {
+  height: calc(100vh - 500px);
+  width: calc(100vw - 350px);
+  padding-left: 60px;
 }

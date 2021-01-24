@@ -85,18 +85,25 @@
   resize: none;
 }
 
+.item-list {
+  color: white;
+}
+
 .items-explain {
   margin-top: 2vh;
 }
 
 .main-item-index {
-  padding: 30px 0px;
-  height: 780px;
+  background: linear-gradient( 135deg, aqua, #c4fff7);
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 50px);
   width: 100vw;
-  table-layout: auto;
+  
   background-color: white;
   text-align: center;
   color: black;
+
 }
 
 h3 {
@@ -107,11 +114,24 @@ h3 {
 
 .item-index {
   width: 100%;
+  height: calc(100vh - 50px);
   display: grid;
+  justify-content: center;
+  background: linear-gradient( 135deg, pink, #c4fff7);
+  padding: 10px 0;
 }
 
 table {
   width: 100%;
+  
+}
+
+td {
+  padding: 5px, 10px;
+  border-bottom: black 1px solid;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 thead, tbody {
@@ -121,15 +141,47 @@ thead, tbody {
 tbody {
   overflow-x: hidden;
   overflow-y: scroll;
-  
-  height: 650px;
+  justify-content: center;
+  height: calc(100vh - 150px);;
 }
 
 .sarch-title{
   display: flex;
+  height: 100px;
   justify-content: space-between;  
   padding: 0 50px;
+  background: linear-gradient( 135deg, orange, #c4fff7);
 }
+
+.search-form{
+  padding-top: 40px;
+}
+
+.btn-a,.btn-r ,.btn-b, .btn, a.btn, button.btn {
+  font-size: 15px;
+  font-weight: 450;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+
+
+
 
 
 
