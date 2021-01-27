@@ -71,8 +71,8 @@ class PlansController < ApplicationController
   def sales_sum
     @plan_sum = Plan.where(item_id: params[:item_id])
     @total_price = @plan_sum.sum(:how_much).to_i
-
     @manage_sum = Manage.where(item_id: params[:item_id])
+    
     @sales = @manage_sum.sum(:profit).to_i
     @roas = format('%.0f', (@sales.to_f / @total_price.to_f * 100).to_f)
   end

@@ -8,8 +8,22 @@
         
       <div class="plan-tool"> 
       <h4>「<%= @item.name %>」商材詳細</h4>
+
+      <div class="item-fix">
       <%= link_to '商材修正', edit_item_path(@item.id), method: :get, class: 'btn' %>
+      </div>
+
+      <div class="chart-sheet">
+              <div class="chart1">  
+                <%= line_chart @manage_sum.group(:sale_date).sum(:profit), title: "売上推移", width: "1000px" %>
+              </div>
+              <div class="chart2">  
+                <%#= pie_chart @plan_sum.group(:target_id).sum(:how_much), title: "広告ターゲット×広告費用" %>
+              </div>
                 
+              </div>  
+
+
       </div>
         
     </div>    

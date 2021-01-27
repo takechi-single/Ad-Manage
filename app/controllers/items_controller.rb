@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:edit, :update, :destroy]
   before_action :set_confirm, only: [:edit, :destroy]
   before_action :move_to_index, except: [:index, :show, :search]
+  
 
   def index
     @plans = Plan.all
@@ -27,6 +28,9 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @plan = Plan.find_by(item_id: @item.id)
+
+    @manage_sum = Manage.where(item_id: @item.id)
+    
   end
 
   def destroy
@@ -71,4 +75,6 @@ class ItemsController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+
+  
 end
