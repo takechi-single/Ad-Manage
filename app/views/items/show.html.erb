@@ -23,8 +23,8 @@
                       <% @manage_sum.each do |manage| %>
                             <td class="plan-all"><%= manage.sale_date %></td>
                             <td class="plan-all"><%= manage.profit %></td>
-                            <td class="plan-all"><%= link_to '売上修正', edit_item_manage_path(@item.id, @manage_sum.ids), method: :get %></td>
-                            <td class="plan-all"><%= link_to '削除', item_manage_path(@item.id, @manage_sum.ids), method: :delete %></td>
+                            <td class="plan-all"><%= link_to '売上修正', edit_item_manage_path(@item.id, manage.id), method: :get %></td>
+                            <td class="plan-all"><%= link_to '削除', item_manage_path(@item.id, manage.id), method: :delete %></td>
                           </tr>  
                       <% end %>
                       </tbody>

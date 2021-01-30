@@ -30,7 +30,9 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @plan = Plan.find_by(item_id: @item.id)
     
-
+    @manages = Manage.all
+    @manage = Manage.find_by(item_id: @item.id)
+    
     @manage_sum = Manage.where(item_id: @item.id)
     @sales = @manage_sum.sum(:profit).to_i
   end
@@ -50,6 +52,7 @@ class ItemsController < ApplicationController
     else
       render action: :edit, alert: @item.errors.full_messages
     end
+    
     
   end
 

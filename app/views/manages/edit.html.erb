@@ -12,7 +12,7 @@
          
       <div class="plan-new">
         
-        <%= form_with model: @manage, url: edit_item_manage_path, local: true do |f| %>
+        <%= form_with model: @manage, url: item_path, local: true do |f| %>
         <%= render 'shared/error_messages', model: f.object %>
         <div class="plan-box">
         <%= f.label :売上日の入力%>

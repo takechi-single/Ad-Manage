@@ -1,7 +1,7 @@
 class ManagesController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :find_plan, only: [:edit, :update, :destroy]
-  before_action :set_confirm, only: [:edit, :destroy]
+  #before_action :set_confirm, only: [:edit, :destroy]
 
   def index
     
@@ -32,7 +32,7 @@ class ManagesController < ApplicationController
   def update
     @manage.update(manage_params)
     if @manage.valid?
-      redirect_to root_path
+      redirect_to action: :show
     else
       render action: :edit
     end
@@ -40,7 +40,7 @@ class ManagesController < ApplicationController
 
   def destroy
     @manage.destroy
-    redirect_to action: :show
+    redirect_to root_path
   end
 
   private
