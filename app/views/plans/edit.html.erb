@@ -11,7 +11,7 @@
       
       <div class="plan-new">
         
-        <%= form_with model: @plan, url:item_plans_path, local: true do |f| %>
+        <%= form_with model: @plan, url: item_plan_path, local: true do |f| %>
         <div class="plan-box">
         <%= f.label :広告出稿時期%>
         <%= f.date_field :when, class:"title", placeholder:"テキスト" %>

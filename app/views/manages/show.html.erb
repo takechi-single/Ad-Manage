@@ -1,11 +1,48 @@
-
-    <header>
-      <div class="header">
+<div class="header">
         <%= render "shared/header_top" %>
       </div>  
     </div>  
-    <div class="main-wrapper">  
+    <div class="plan-info">  
       
-      <%= render "manages/detail"%>
-    </div>
-  </body>  
+      <%= render "shared/side_tools" %>
+        
+      <div class="plan-tool"> 
+      <h4>「<%= @item.name %>」商材詳細</h4>
+          <%#= link_to '売上修正',  edit_item_manage_path(@item.id, @manages.ids), method: :get, class: 'btn' %>
+          <%#= link_to '削除',item_manages_path(@item.id, @manages.ids), method: :delete, class: 'btn' %> 
+      <div class="chart-sheet">
+         <div class="chart1">  
+            <%= line_chart @manage_sum.group(:sale_date).sum(:profit), title: "売上推移", width: "1000px" %>
+         </div>                        
+      </div>  
+              <div class="plan-show">
+                <div class="plan-all">
+                  <h2>売上一覧</h2>
+                   <table >
+                    <tbody>
+                      <% @manage_sum.each do |manage| %>
+                            <td class="plan-all"><%= manage.sale_date %></td>
+                            <td class="plan-all"><%= manage.profit %></td>
+                            <td class="plan-all"><%= link_to '売上修正', edit_item_manage_path(@item.id, manage.id), method: :get %></td>
+                            <td class="plan-all"><%= link_to '削除', item_manage_path(@item.id, manage.id), method: :delete %></td>
+                          </tr>  
+                      <% end %>
+                      </tbody>
+                    </table>  
+                  </div>
+                  
+                   
+                  <table >
+                    <tbody>
+                      <tr>
+                        <th class="detail-item"><%= @item.name %>総売上</th>
+                        <td class="detail-value"><%= @sales.to_s(:delimited) %> 円</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+              </div>  
+      
+        
+    </div>   

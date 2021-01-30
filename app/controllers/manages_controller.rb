@@ -1,12 +1,16 @@
 class ManagesController < ApplicationController
-  before_action :set_item, only: %i[show]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :find_plan, only: [:edit, :update, :destroy]
+  #before_action :set_confirm, only: [:edit, :destroy]
 
   def index
-    @items = Item.all.includes(:user)
+    
   end
 
   def show
-    @items = Item.all.includes(:user)
+    @manage_sum = Manage.where(item_id: @item.id)
+    @sales = @manage_sum.sum(:profit).to_i
+    @manage = Manage.find(params[:id])
   end
 
   def new
@@ -23,6 +27,23 @@ class ManagesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @manage.update(manage_params)
+    if @manage.valid?
+      redirect_to action: :show
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
+    @manage.destroy
+    redirect_to root_path
+  end
+
   private
 
   def manage_params
@@ -30,6 +51,14 @@ class ManagesController < ApplicationController
   end
 
   def set_item
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:item_id])
+  end
+
+  def find_plan
+    @manage = Manage.find(params[:id])
+  end
+
+  def set_confirm
+    redirect_to action: :index if current_user.id != @manage.user_id
   end
 end

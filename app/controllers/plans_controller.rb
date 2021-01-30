@@ -1,9 +1,9 @@
 class PlansController < ApplicationController
-  before_action :set_item, only: %i[index create new show]
+  before_action :set_item, only: %i[edit update index create new show]
   before_action :sales_sum, only: %i[show]
   before_action :item_back, only: %i[show edit update destroy]
   before_action :find_plan, only: [:edit, :update, :destroy]
-  before_action :set_confirm, only: [:edit, :destroy]
+  before_action :set_confirm, only: [:edit, :update, :destroy]
 
   def index
     @plans = Plan.all
@@ -49,7 +49,7 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:when, :where, :with_whom, :target_id, :media_id, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
+    params.require(:plan).permit(:when, :where, :target_id, :media_id, :how_much).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 
   def set_item
@@ -71,8 +71,8 @@ class PlansController < ApplicationController
   def sales_sum
     @plan_sum = Plan.where(item_id: params[:item_id])
     @total_price = @plan_sum.sum(:how_much).to_i
-
     @manage_sum = Manage.where(item_id: params[:item_id])
+    
     @sales = @manage_sum.sum(:profit).to_i
     @roas = format('%.0f', (@sales.to_f / @total_price.to_f * 100).to_f)
   end

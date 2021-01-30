@@ -10,67 +10,55 @@
 
 ### Association
 
-- has_many :room_users
-- has_many :rooms, through: item_users
-- has_many :advertising
+- has_many :item
+- has_many :manages
+- has_many :plans, through: :items
 
 ## items テーブル
 
-| Column    | Type   | Options     |
-| --------- | ------ | ----------- |
-| name      | string | null: false |
-| text      | string | null: false |
-| price     | string | null: false |
-| release   | string | null: false |
+| Column       | Type   | Options     |
+| ------------ | ------ | ----------- |
+| name         | string | null: false |
+| text         | string | null: false |
+| price        | string | null: false |
+| release_date | date   | null: false |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_many :item_users
-- has_many :users, through: item_users
-- has_many :advertising
-<<<<<<< Updated upstream
-- has_many :customer
-=======
->>>>>>> Stashed changes
+- belongs_to :user, optional: true
+- has_many :plan
+- has_many :manages
 
-## item_users テーブル
+## plans テーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| item   | references | null: false, foreign_key: true |
+| Column       | Type   | Options     |
+| ------------ | ------ | ----------- |
+| when         | date   | null: false |
+| where        | string | null: false |
+| price        | string | null: false |
+| target_id    | date   | null: false |
+| media_id     | string | null: false |
+| how_much     | string | null: false |
+| user         | references | null: false, foreign_key: true |
+| item         | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :item
 - belongs_to :user
+- belongs_to :item
 
-## advertising テーブル
+## manages テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| media   | string     |                                |
+| profit  | string     |                                |
 | user    | references | null: false, foreign_key: true |
 | item    | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :item
-<<<<<<< Updated upstream
 - belongs_to :user
 
-## customers テーブル
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-| age      | string | null: false |
-| gender   | string | null: false |
-
-### Association
-
-- belongs_to :item
-- belongs_to :advertising
-=======
-- belongs_to :user
->>>>>>> Stashed changes
