@@ -8,7 +8,8 @@ class ManagesController < ApplicationController
   end
 
   def show
-    
+    @manage_sum = Manage.where(item_id: @item.id)
+    @sales = @manage_sum.sum(:profit).to_i
     @manage = Manage.find(params[:id])
   end
 
@@ -50,7 +51,7 @@ class ManagesController < ApplicationController
   end
 
   def set_item
-    @items = Item.all.includes(:user)
+    @item = Item.find(params[:item_id])
   end
 
   def find_plan

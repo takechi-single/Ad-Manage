@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: %i[index edit new create search]
   before_action :find_item, only: [:edit, :update, :destroy]
   before_action :set_confirm, only: [:edit, :destroy]
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :search]
   
 
   def index
@@ -26,16 +26,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-    @item = Item.find(params[:id])
-    @plan = Plan.find_by(item_id: @item.id)
-    
-    @manages = Manage.all
-    @manage = Manage.find_by(item_id: @item.id)
-    
-    @manage_sum = Manage.where(item_id: @item.id)
-    @sales = @manage_sum.sum(:profit).to_i
-  end
 
   def destroy
     @item.destroy
@@ -71,6 +61,7 @@ class ItemsController < ApplicationController
   end
 
   def find_item
+    @manage = Manage.find(params[:id])
     @item = Item.find(params[:id])
   end
 
