@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
 
   def index
     @plans = Plan.all
+    @manages = Manage.all
   end
 
   def new
@@ -28,9 +29,10 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @plan = Plan.find_by(item_id: @item.id)
+    
 
     @manage_sum = Manage.where(item_id: @item.id)
-    
+    @sales = @manage_sum.sum(:profit).to_i
   end
 
   def destroy
@@ -48,6 +50,7 @@ class ItemsController < ApplicationController
     else
       render action: :edit, alert: @item.errors.full_messages
     end
+    
   end
 
   def search

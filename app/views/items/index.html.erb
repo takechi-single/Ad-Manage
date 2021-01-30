@@ -32,7 +32,8 @@
                     <td><%= link_to '広告プラン作成', new_item_plan_path(item.id), class: 'btn-a' %></td>
                     <td><%= link_to '広告出稿状況', item_plan_path(item.id, @plans.ids), method: :get, class: 'btn-a' if @plans.present? %></td>
                     <td><%= link_to '売上入力', new_item_manage_path(item.id), method: :get, class: 'btn-b' %></td>
-                    <td><%= link_to '商材詳細', item_path(item.id), method: :get, class: 'btn' %></td>
+                    <td><%= link_to '売上一覧', item_path(item.id), method: :get, class: 'btn-b' %></td>
+                    <td><%= link_to '商材修正', edit_item_path(item.id), method: :get, class: 'btn' %></td>
                     <td><%= link_to '商材削除', item_path(item.id), method: :delete, class: 'btn' %></td>
                   </tr>  
               <% end %>
