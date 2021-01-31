@@ -11,13 +11,19 @@
           <%#= link_to '売上修正',  edit_item_manage_path(@item.id, @manages.ids), method: :get, class: 'btn' %>
           <%#= link_to '削除',item_manages_path(@item.id, @manages.ids), method: :delete, class: 'btn' %> 
       <div class="chart-sheet">
-         <div class="chart1">  
-            <%= line_chart @manage_sum.group(:sale_date).sum(:profit), title: "売上推移", width: "1000px" %>
-         </div>                        
+        <% if @manage_sum.present? %>
+            <div class="chart1">  
+                <%= line_chart @manage_sum.group(:sale_date).sum(:profit), title: "売上推移", width: "1000px" %>
+            </div>
+          <% else %>
+                <h11 class="unknown">売上無し</h11>  
+        <% end %>                          
       </div>  
               <div class="plan-show">
                 <div class="plan-all">
+                <% if @manage_sum.present? %>
                   <h2>売上一覧</h2>
+                <% end %>  
                    <table >
                     <tbody>
                       <% @manage_sum.each do |manage| %>

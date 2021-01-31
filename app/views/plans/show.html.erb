@@ -12,7 +12,7 @@
               
 
               <div class="chart-sheet">
-              
+              <% if @plan_sum.present? %>
               <div class="chart1">  
                 <%= column_chart @plan_sum.group(:media_id).sum(:how_much), title: "広告媒体×広告費用" %>
               </div>
@@ -20,11 +20,15 @@
               <div class="chart2">  
                 <%= pie_chart @plan_sum.group(:target_id).sum(:how_much), title: "広告ターゲット×広告費用" %>
               </div>
-                
+              <% else %>
+                <h11 class="unknown">広告出稿なし</h11>
+              <% end %>  
               </div>  
               <div class="plan-show">
                 <div class="plan-all">
+                <% if @plan_sum.present? %>
                   <h2>広告出稿プラン一覧</h2>
+                <% end %>  
                    <table >
                     <tbody>
                       <% @plan_sum.each do |plan| %>
