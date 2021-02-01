@@ -61,7 +61,6 @@ class ItemsController < ApplicationController
   end
 
   def find_item
-    @manage = Manage.find(params[:id])
     @item = Item.find(params[:id])
   end
 
@@ -71,8 +70,7 @@ class ItemsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in?
-    @plan_sum = Plan.where(item_id: params[:item_id])
-    @plan = Plan.find(params[:id])
+    
   end
 
   
