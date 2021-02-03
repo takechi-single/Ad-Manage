@@ -1,7 +1,7 @@
 class CreatePlans < ActiveRecord::Migration[6.0]
   def change
     create_table :plans do |t|
-      t.date :when,               null: false
+      t.date :out_date,               null: false
       t.string :where,            null: false
       t.string :target_id,       null: false
       t.string :media_id,        null: false

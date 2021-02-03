@@ -34,7 +34,7 @@
 
 | Column       | Type   | Options     |
 | ------------ | ------ | ----------- |
-| when         | date   | null: false |
+| out_date     | date   | null: false |
 | where        | string | null: false |
 | price        | string | null: false |
 | target_id    | date   | null: false |
