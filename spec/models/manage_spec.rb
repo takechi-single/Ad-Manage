@@ -14,19 +14,19 @@ RSpec.describe Manage, type: :model do
     it '売上日を選択しなければ出品できないこと' do
       @manage.sale_date = nil
       @manage.valid?
-      expect(@manage.errors.full_messages).to include("Sale_date can't be blank")
+      expect(@manage.errors.full_messages).to include("Sale date can't be blank")
     end
 
     it '売上を入力しなければ登録できないこと' do
       @manage.profit = nil
       @manage.valid?
-      expect(@manage.errors.full_messages).to include('Profit is not a number')
+      expect(@manage.errors.full_messages).to include("Profit can't be blank")
     end
 
     it '売上は全角数字だと登録できないこと' do
       @manage.profit = '７００'
       @manage.valid?
-      expect(@manage.errors.full_messages).to include('Profit is invalid. Input half-width characters')
+      expect(@manage.errors.full_messages).to include("Profit is invalid. Input half-width characters.")
     end
   end
 end
