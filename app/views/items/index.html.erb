@@ -30,9 +30,17 @@
                     <td><%= item.name %></td>
                     <td><%= image_tag item.image.variant(resize:'100x100') if item.image.attached? %></td>
                     <td><%= link_to '広告プラン作成', new_item_plan_path(item.id), class: 'btn-a'%></td>
-                    <td><%= link_to '広告出稿状況', item_plan_path(item.id, @plans.ids), method: :get, class: 'btn-a' %></td>
+                    <% if @plans.ids != nil %>
+                      <td><%= link_to '広告出稿状況', item_plan_path(item.id, @plans.ids), method: :get, class: 'btn-a' %></td>
+                    <%else%>
+                      <td><%= '未出稿' %></td>
+                    <% end %>
                     <td><%= link_to '売上入力', new_item_manage_path(item.id), method: :get, class: 'btn-b' %></td>
+                    <% if @plans.ids != nil %>
                     <td><%= link_to '売上一覧', item_manage_path(item.id, @manages.ids), method: :get, class: 'btn-b' %></td>
+                    <% else %>
+                    <td><%= '未入力' %></td>
+                    <% end %>
                     <td><%= link_to '商材修正', edit_item_path(item.id), method: :get, class: 'btn' if current_user.id == item.user_id %></td>
                     <td><%= link_to '商材削除', item_path(item.id), method: :delete, class: 'btn' if current_user.id == item.user_id %></td>
                   </tr>  

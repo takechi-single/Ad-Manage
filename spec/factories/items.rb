@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :item do
     image { 'image/png' }
     name { 'リンゴジュース' }
-    taxt { '長野県産りんごを使用し、甘酸っぱさが魅力' }
+    text { '長野県産りんごを使用し、甘酸っぱさが魅力' }
     price { '650' }
     relese_date {'2021-01-01' }
 

@@ -41,7 +41,7 @@ class ManagesController < ApplicationController
 
   def destroy
     @manage.destroy
-    redirect_to root_path
+    redirect_to action: :show
   end
 
   private

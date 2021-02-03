@@ -18,7 +18,7 @@ RSpec.describe Plan, type: :model do
     end
 
     it '出稿場所を入力しなければ出品できないこと' do
-      @plan.when = nil
+      @plan.where = nil
       @plan.valid?
       expect(@plan.errors.full_messages).to include("When can't be blank")
     end

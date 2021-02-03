@@ -14,4 +14,6 @@ class Plan < ActiveRecord::Base
     validates :media_id
     validates :how_much, numericality: { only_integer: true, message: 'is invalid. Input half-width characters.' }
   end
+
+  
 end
