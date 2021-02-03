@@ -1,13 +1,10 @@
 class PlansController < ApplicationController
   before_action :set_item, only: %i[edit update index create new show]
   before_action :sales_sum, only: %i[show]
-  before_action :item_back, only: %i[show edit update destroy]
   before_action :find_plan, only: [:edit, :update, :destroy]
   before_action :set_confirm, only: [:edit, :update, :destroy]
 
-  def index
-    @plans = Plan.all
-  end
+  
 
   def new
     @plan = Plan.new
@@ -62,10 +59,6 @@ class PlansController < ApplicationController
 
   def set_confirm
     redirect_to action: :index if current_user.id != @plan.user_id
-  end
-
-  def item_back
-    redirect_to root_path if id = nil
   end
 
   def sales_sum

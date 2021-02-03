@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'items#index'
-  resources :users, only: %i[edit update show new create index destroy]
+  resources :users
   resources :items  do
-    resources :plans
-    resources :manages
+    resources :plans, only: %i[edit update show new create destroy]
+    resources :manages, only: %i[edit update show new create destroy]
     collection do
       get 'search'
     end
