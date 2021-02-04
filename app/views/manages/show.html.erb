@@ -28,9 +28,9 @@
                     <tbody>
                       <% @manage_sum.each do |manage| %>
                             <td class="plan-all"><%= manage.sale_date %></td>
-                            <td class="plan-all"><%= manage.profit %></td>
-                            <td class="plan-all"><%= link_to '売上修正', edit_item_manage_path(@item.id, manage.id), method: :get %></td>
-                            <td class="plan-all"><%= link_to '削除', item_manage_path(@item.id, manage.id), method: :delete %></td>
+                            <td class="plan-all"><%= manage.profit.to_s(:delimited) %>円</td>
+                            <td class="plan-all"><%= link_to '売上修正', edit_item_manage_path(@item.id, manage.id), method: :get if current_user.id == manage.user_id %></td>
+                            <td class="plan-all"><%= link_to '削除', item_manage_path(@item.id, manage.id), method: :delete if current_user.id == manage.user_id %></td>
                           </tr>  
                       <% end %>
                       </tbody>
