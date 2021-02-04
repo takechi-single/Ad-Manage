@@ -8,10 +8,10 @@ class Plan < ActiveRecord::Base
   belongs_to_active_hash :media, optional: true
 
   with_options presence: true do
-    validates :when
+    validates :out_date
     validates :where
-    validates :target_id
-    validates :media_id
     validates :how_much, numericality: { only_integer: true, message: 'is invalid. Input half-width characters.' }
   end
+
+  
 end

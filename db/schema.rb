@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2021_01_02_010447) do
   end
 
   create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.date "when", null: false
+    t.date "out_date", null: false
     t.string "where", null: false
     t.string "target_id", null: false
     t.string "media_id", null: false

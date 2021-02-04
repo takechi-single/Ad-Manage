@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
   def index
     @plans = Plan.all
     @manages = Manage.all
+    
   end
 
   def new
@@ -61,7 +62,6 @@ class ItemsController < ApplicationController
   end
 
   def find_item
-    @manage = Manage.find(params[:id])
     @item = Item.find(params[:id])
   end
 
@@ -71,6 +71,7 @@ class ItemsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index unless user_signed_in?
+    
   end
 
   
