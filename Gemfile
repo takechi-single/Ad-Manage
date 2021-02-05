@@ -64,4 +64,5 @@ gem 'mini_magick'
 gem 'rspec-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'chartkick'
+gem "aws-sdk-s3", require: false
 
