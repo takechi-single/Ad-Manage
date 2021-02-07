@@ -119,7 +119,7 @@ ul,li {
  
 
 .main-manage {
-  background: linear-gradient( 45deg, #7bc6e2, #c4d4ff);
+  background: linear-gradient( 45deg, #7bc6e2, lightskyblue);
   width: 100vw;
   overflow: scroll;
   display: flex;
@@ -142,7 +142,6 @@ ul,li {
 .media1 {
   height: 385px;
   width: 50vw;
-  background: linear-gradient( 135deg, red, #c4fff7);
   
 }
 .media2 {

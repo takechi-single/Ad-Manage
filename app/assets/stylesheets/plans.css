@@ -81,7 +81,7 @@
   height: calc(100vh - 50px);
   width: calc(100vw - 300px);
   padding: 5px;
-  background: linear-gradient( 135deg, snow, #c4fff7);
+  background: linear-gradient( 135deg, snow, lightskyblue);
 }
 
 
