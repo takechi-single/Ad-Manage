@@ -36,7 +36,7 @@
                       <td><%= '未出稿' %></td>
                     <% end %>
                     <td><%= link_to '売上入力', new_item_manage_path(item.id), method: :get, class: 'btn-b' if current_user.id == item.user_id %></td>
-                    <% if @plans.ids != nil %>
+                    <% if @manages.ids != nil %>
                     <td><%= link_to '売上一覧', item_manage_path(item.id, @manages.ids), method: :get, class: 'btn-b' %></td>
                     <% else %>
                     <td><%= '未入力' %></td>
