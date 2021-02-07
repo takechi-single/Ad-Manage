@@ -9,7 +9,6 @@ class ItemsController < ApplicationController
   def index
     @plans = Plan.all
     @manages = Manage.all
-    
   end
 
   def new

@@ -13,15 +13,15 @@
     #password_confirmation: 'yamamoto1111'
 #)
 
-Item.create(
-  name: 'リンゴジュース',
-  text: '長野県産りんごを使用し、甘酸っぱさが魅力',
-  price: '650',
-  relese_date: '2021-01-01',
-  user_id: '99',
-  image: attach(io: File.open("./db/images/test.jpg")
-)
+#Item.create(
+  #name: 'リンゴジュース',
+  #text: '長野県産りんごを使用し、甘酸っぱさが魅力',
+  #price: '650',
+  #relese_date: '2021-01-01',
+  #user_id: '99',
+  #image: attach(io: File.open("./db/images/test.jpg")
+#)
 
 Plan.create(out_date: '2021-01-01', where: '東京都中野区', target_id: '男女35歳～49歳', media_id: '折込', how_much: '460000', user_id: '99', item_id: '99')
 
-Manage.create(sale_date: '2021-02-01', profit: '50000', user_id: '99', item_id: '99')
+Manage.create(sale_date: '2021-02-01', profit: '50000', user_id: '1', item_id: '1')
