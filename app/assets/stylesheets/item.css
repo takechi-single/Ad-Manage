@@ -87,6 +87,7 @@
 
 .item-list {
   color: white;
+  list-style-type:none
 }
 
 .items-explain {

@@ -18,7 +18,6 @@ class ManagesController < ApplicationController
   end
 
   def create
-    @manage = current_user
     @manage = Manage.new(manage_params)
     if @manage.valid?
       @manage.save

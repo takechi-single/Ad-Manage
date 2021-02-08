@@ -156,7 +156,7 @@ thead, tbody {
 }
 
 .sale-data h2  {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .sale-data table  {
@@ -193,6 +193,7 @@ h4{
   font-weight: bold;
   color: black;
   text-align: left;
+  margin: 0;
 }
 
 .chart-sheet {

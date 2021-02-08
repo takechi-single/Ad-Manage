@@ -42,7 +42,11 @@ h1, h2{
 ul,li {
   padding-bottom: 15px;
   color: black;
-  
+  padding: 0;
+}
+
+li{
+  padding-bottom: 5px;
 }
 
 .header {
@@ -65,17 +69,19 @@ ul,li {
 
 .navbar {
   width: 30%;
-  
+  list-style-type:none
 }
 
 .nav-lists {
   display: flex;
   justify-content: space-around;
+  list-style-type:none
 }
 
 .nav-lists li  {
   color: white;
   marker: none;
+  list-style-type:none
 }
 
 
