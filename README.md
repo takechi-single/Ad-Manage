@@ -7,8 +7,8 @@ Ad-Manage
 
 # 本番環境
 デプロイ先 : https://ad-manage.herokuapp.com/<br>
-ID: takechi<br>
-Pass: 9310<br>
+ID： takechi<br>
+Pass： 9310<br>
 
 ■登録済みユーザーアカウント<br>
 ・メールアドレス： yamada@com<br>
