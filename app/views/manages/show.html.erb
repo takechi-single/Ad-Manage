@@ -7,7 +7,7 @@
       <%= render "shared/side_tools" %>
         
       <div class="plan-tool"> 
-      <h4>「<%= @item.name %>」商材詳細</h4>
+      <h4>「<%= @item.name %>」売上表</h4>
           <%#= link_to '売上修正',  edit_item_manage_path(@item.id, @manages.ids), method: :get, class: 'btn' %>
           <%#= link_to '削除',item_manages_path(@item.id, @manages.ids), method: :delete, class: 'btn' %> 
       <div class="chart-sheet">
@@ -28,7 +28,7 @@
                     <tbody>
                       <% @manage_sum.each do |manage| %>
                             <td class="plan-all"><%= manage.sale_date %></td>
-                            <td class="plan-all"><%= manage.profit.to_s(:delimited) %>円</td>
+                            <td class="plan-all"><%= manage.profit %>円</td>
                             <td class="plan-all"><%= link_to '売上修正', edit_item_manage_path(@item.id, manage.id), method: :get if current_user.id == manage.user_id %></td>
                             <td class="plan-all"><%= link_to '削除', item_manage_path(@item.id, manage.id), method: :delete if current_user.id == manage.user_id %></td>
                           </tr>  

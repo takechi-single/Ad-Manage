@@ -9,8 +9,8 @@ class Item < ActiveRecord::Base
 
   belongs_to :user, optional: true
   has_one_attached :image
-  has_many :manages
-  has_many :plan
+  has_many :manages, dependent: :destroy
+  has_many :plan, dependent: :destroy
 
   def self.search(search)
     if search != ''
